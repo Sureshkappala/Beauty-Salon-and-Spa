@@ -3416,6 +3416,416 @@ p:last-child {
   .press-ribbon {
     padding: 1.25rem 1rem;
   }
+/* ==========================================================================
+   Uniform Height System (Images & Content Same Height Across All Pages)
+   ========================================================================== */
+
+/* 1. Hero Section Equal Height */
+.hero-grid {
+  align-items: stretch !important;
+}
+.hero-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+.hero-media {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 480px;
+}
+.hero-image-wrapper {
+  flex: 1 1 auto !important;
+  height: 100% !important;
+  width: 100% !important;
+  min-height: 480px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.hero-image-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+
+/* 2. Side-by-Side Narrative Grids (About & Featured Service Previews) */
+.about-preview-grid {
+  align-items: stretch !important;
+}
+.about-preview-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+.about-preview-images {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1.25rem !important;
+  height: 100% !important;
+  align-items: stretch !important;
+}
+.about-preview-images img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover !important;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-top: 0 !important;
+}
+
+/* 3. Cards in Grid (Uniform Card Height & Uniform Image Height) */
+.services-grid,
+.experts-grid,
+.packages-grid,
+.standards-grid,
+.amenities-grid,
+.ritual-steps-grid,
+.scent-library-grid,
+.benefits-grid,
+.guarantee-grid,
+.pairing-grid,
+.faq-grid,
+.vibes-grid,
+.before-after-grid,
+.timeline-grid {
+  align-items: stretch !important;
+}
+
+/* Card image containers locked to exact height */
+.service-card-media {
+  height: 240px !important;
+  width: 100% !important;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+.service-card-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.expert-media {
+  height: 320px !important;
+  width: 100% !important;
+  overflow: hidden;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+.expert-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.transformation-img-wrap {
+  height: 240px !important;
+  width: 100% !important;
+  position: relative;
+  overflow: hidden;
+}
+.transformation-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.gallery-item {
+  aspect-ratio: 4 / 3 !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Card bodies match full height with action buttons pinned at bottom */
+.service-card,
+.expert-card,
+.package-card,
+.luxury-card,
+.testimonial-card,
+.transformation-showcase-card,
+.milestone-card,
+.faq-card {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.service-card-body,
+.expert-body,
+.transformation-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  height: 100% !important;
+}
+
+.service-card-actions,
+.expert-actions,
+.card-actions-row {
+  margin-top: auto !important;
+}
+
+/* 4. Service Detail Page Media & Content */
+.service-detail-grid {
+  align-items: stretch !important;
+}
+.service-detail-main,
+.service-detail-sidebar {
+  height: 100% !important;
+}
+
+/* Mobile Adjustments for Equal Height */
+@media (max-width: 768px) {
+  .hero-media,
+  .hero-image-wrapper {
+    min-height: 300px !important;
+  }
+  .about-preview-images {
+    grid-template-columns: 1fr 1fr !important;
+    min-height: 220px;
+  }
+  .service-card-media {
+    height: 200px !important;
+  }
+  .expert-media {
+    height: 260px !important;
+  }
+}
+
+/* ==========================================================================
+   Luxury Animations Suite (Hero Section & All Pages)
+   ========================================================================== */
+
+/* Keyframes */
+@keyframes fadeInUpLuxury {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDownLuxury {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRightLuxury {
+  0% {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroImageFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.018);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes softGlowPulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(197, 168, 128, 0.22);
+  }
+  50% {
+    box-shadow: 0 16px 42px rgba(197, 168, 128, 0.42);
+  }
+}
+
+/* Staggered Hero Section Entrance */
+.hero-tagline {
+  animation: fadeInDownLuxury 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.1s;
+}
+
+.hero-title {
+  animation: fadeInUpLuxury 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.25s;
+}
+
+.hero-description {
+  animation: fadeInUpLuxury 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.4s;
+}
+
+.hero-buttons {
+  animation: fadeInUpLuxury 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.55s;
+}
+
+.hero-highlights {
+  animation: fadeInUpLuxury 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.7s;
+}
+
+.hero-media {
+  animation: fadeInRightLuxury 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
+}
+
+.hero-image-wrapper img {
+  animation: heroImageFloat 7s ease-in-out infinite;
+  transition: transform 0.5s ease;
+}
+
+.hero-floating-card {
+  animation: float 4s ease-in-out infinite, softGlowPulse 4s ease-in-out infinite !important;
+}
+
+/* Subpage Page-Header Hero Banner Animations */
+main > .section-blush:first-child,
+main > .section:first-child {
+  animation: fadeInUpLuxury 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+main > .section-blush:first-child .sub-heading,
+main > .section:first-child .sub-heading {
+  display: inline-block;
+  animation: fadeInDownLuxury 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.1s;
+}
+main > .section-blush:first-child h1,
+main > .section:first-child h1 {
+  animation: fadeInUpLuxury 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.2s;
+}
+main > .section-blush:first-child p,
+main > .section:first-child p {
+  animation: fadeInUpLuxury 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
+}
+
+/* Scroll-Triggered Reveal Animations Across All Pages */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered transition delays for adjacent cards */
+.reveal-item:nth-child(2) { transition-delay: 0.08s; }
+.reveal-item:nth-child(3) { transition-delay: 0.16s; }
+.reveal-item:nth-child(4) { transition-delay: 0.24s; }
+.reveal-item:nth-child(5) { transition-delay: 0.32s; }
+.reveal-item:nth-child(6) { transition-delay: 0.40s; }
+
+/* Interactive Button Luxury Shimmer */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: transform 0.65s ease;
+}
+
+.btn:hover::after {
+  transform: translateX(350%) rotate(25deg);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Card Hover Micro-Elevation */
+.luxury-card:hover,
+.service-card:hover,
+.expert-card:hover,
+.package-card:hover,
+.testimonial-card:hover,
+.milestone-card:hover,
+.transformation-showcase-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 14px 34px rgba(43, 31, 29, 0.1) !important;
+}
+
+/* Gallery image zoom on hover */
+.gallery-item {
+  overflow: hidden;
+}
+.gallery-item img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.gallery-item:hover img {
+  transform: scale(1.06) !important;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero-tagline,
+  .hero-title,
+  .hero-description,
+  .hero-buttons,
+  .hero-highlights,
+  .hero-media,
+  .hero-image-wrapper img,
+  .hero-floating-card,
+  main > .section-blush:first-child,
+  main > .section:first-child {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Reduced Motion */

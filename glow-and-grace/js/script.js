@@ -1596,3 +1596,55 @@ document.addEventListener('click', (e) => {
   }
 });
 
+/* ==========================================================================
+   15. Page-Wide Scroll Reveal Animations Suite
+   ========================================================================== */
+function initScrollReveal() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const targets = document.querySelectorAll(
+    '.luxury-card, .service-card, .expert-card, .package-card, .testimonial-card, ' +
+    '.gallery-item, .milestone-card, .faq-card, .transformation-showcase-card, ' +
+    '.section-intro-header, .form-card, .contact-card, .values-list, .cta-box, ' +
+    '.about-preview-images, .about-preview-content'
+  );
+
+  if (!targets.length) return;
+
+  targets.forEach((el) => {
+    el.classList.add('reveal-item');
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    targets.forEach((el) => {
+      observer.observe(el);
+    });
+  } else {
+    targets.forEach((el) => {
+      el.classList.add('is-revealed');
+    });
+  }
+}
+
+// Auto-run on DOM ready or immediate if already loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollReveal);
+} else {
+  initScrollReveal();
+}
+
+
