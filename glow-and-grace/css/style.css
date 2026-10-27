@@ -1080,10 +1080,11 @@ p:last-child {
 
 .service-card {
   background-color: var(--color-white);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 18px rgba(43, 31, 29, 0.04);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+  border-left: 4px solid var(--color-gold);
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
@@ -1093,7 +1094,7 @@ p:last-child {
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border-gold);
+  border-left-color: var(--color-gold-bright);
 }
 
 .service-card-media {
@@ -1275,10 +1276,11 @@ p:last-child {
 
 .package-card {
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   padding: 2.5rem 2rem;
-  border: 1.5px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+  border-left: 4px solid var(--color-gold);
+  box-shadow: 0 4px 18px rgba(43, 31, 29, 0.04);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1288,6 +1290,7 @@ p:last-child {
 .package-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
+  border-left-color: var(--color-gold-bright);
 }
 
 .package-card.featured {
@@ -1604,10 +1607,11 @@ p:last-child {
 
 .expert-card {
   background-color: var(--color-white);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 18px rgba(43, 31, 29, 0.04);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+  border-left: 4px solid var(--color-gold);
   transition: all var(--transition-normal);
   text-align: center;
 }
@@ -1615,7 +1619,7 @@ p:last-child {
 .expert-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
-  border-color: var(--color-gold);
+  border-left-color: var(--color-gold-bright);
 }
 
 .expert-media {
@@ -1667,12 +1671,19 @@ p:last-child {
 .testimonial-card {
   background-color: var(--color-white);
   padding: 2.25rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+  border-left: 4px solid var(--color-gold);
+  box-shadow: 0 4px 18px rgba(43, 31, 29, 0.04);
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-left-color: var(--color-gold-bright);
+  box-shadow: 0 12px 28px rgba(43, 31, 29, 0.08);
 }
 
 .testimonial-stars {
@@ -1796,10 +1807,11 @@ p:last-child {
 /* --- Form Styles & Booking --- */
 .form-card {
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   padding: 2.5rem;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(43, 31, 29, 0.05);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+  border-left: 4px solid var(--color-gold);
 }
 
 .form-grid {
@@ -3323,22 +3335,52 @@ p:last-child {
   width: 100%;
 }
 
+/* ==========================================================================
+   Signature Gold Accent Border System (All Pages)
+   ========================================================================== */
+.luxury-card,
+.faq-card,
+.service-card,
+.package-card,
+.expert-card,
+.testimonial-card,
+.milestone-card,
+.transformation-showcase-card,
+.form-card,
+.service-booking-card,
+.contact-info-item,
+.booking-ref-box,
+.value-item {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 168, 128, 0.25) !important;
+  border-left: 4px solid var(--color-gold) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: 0 4px 18px rgba(43, 31, 29, 0.04) !important;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-left-color 0.28s ease, border-color 0.28s ease !important;
+}
+
+.luxury-card:hover,
+.faq-card:hover,
+.service-card:hover,
+.package-card:hover,
+.expert-card:hover,
+.testimonial-card:hover,
+.milestone-card:hover,
+.transformation-showcase-card:hover,
+.contact-info-item:hover,
+.value-item:hover,
+.service-booking-card:hover {
+  border-left-color: var(--color-gold-bright) !important;
+  box-shadow: 0 12px 30px rgba(43, 31, 29, 0.09) !important;
+  transform: translateY(-4px) !important;
+}
+
 /* Base Luxury Card */
 .luxury-card {
-  background: #ffffff;
-  border: 1px solid rgba(197, 168, 128, 0.25);
-  border-radius: var(--radius-md);
   padding: 2rem 1.75rem;
-  box-shadow: 0 4px 18px rgba(43, 31, 29, 0.04);
-  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
   position: relative;
   display: flex;
   flex-direction: column;
-}
-.luxury-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(43, 31, 29, 0.08);
-  border-color: var(--color-gold);
 }
 
 /* Card Elements */
@@ -3439,14 +3481,16 @@ p:last-child {
 .milestone-card {
   background: #ffffff;
   border: 1px solid rgba(197, 168, 128, 0.25);
-  border-top: 3px solid var(--color-gold);
-  border-radius: var(--radius-md);
-  padding: 1.75rem 1.5rem;
-  text-align: center;
-  transition: transform 0.25s ease;
+  border-left: 4px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 1.6rem;
+  text-align: left;
+  transition: transform 0.25s ease, border-left-color 0.25s ease, box-shadow 0.25s ease;
 }
 .milestone-card:hover {
   transform: translateY(-4px);
+  border-left-color: var(--color-gold-bright);
+  box-shadow: 0 12px 28px rgba(43, 31, 29, 0.08);
 }
 .milestone-year {
   font-family: var(--font-serif);
@@ -3499,12 +3543,17 @@ p:last-child {
 /* Before / After Showcase Card */
 .transformation-showcase-card {
   background: #ffffff;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   border: 1px solid rgba(197, 168, 128, 0.25);
+  border-left: 4px solid var(--color-gold);
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(43, 31, 29, 0.05);
   display: flex;
   flex-direction: column;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-left-color 0.28s ease;
+}
+.transformation-showcase-card:hover {
+  border-left-color: var(--color-gold-bright);
 }
 .transformation-img-wrap {
   position: relative;
