@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin &amp; Staff Management Portal | Glow &amp; Grace</title>
+  <meta name="description" content="Salon management dashboard for managing appointments, catalog services, client inquiries, and staff schedules at Glow & Grace.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-dashboard-view">
+
+  <!-- Admin Dashboard Layout -->
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="dashboard-sidebar" aria-label="Admin Navigation Sidebar">
+      <div class="dashboard-sidebar-header">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <a href="admin-dashboard.html" aria-label="Admin Dashboard">
+            <img src="assets/images/logo-footer.png" alt="Stackly Logo" style="height: 36px; display: block;">
+          </a>
+          <button type="button" class="dashboard-sidebar-close" aria-label="Close admin sidebar">&times;</button>
+        </div>
+        <div class="dashboard-user-card">
+          <div class="dashboard-avatar" style="background: linear-gradient(135deg, var(--color-gold) 0%, #a68449 100%);">SS</div>
+          <div class="dashboard-user-info">
+            <h4>Sophia Sterling</h4>
+            <span>Sanctuary Director</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="dashboard-nav-list">
+        <button type="button" class="dashboard-nav-btn admin-nav-btn active" data-tab="adm-overview">
+          <span>&#9632;</span> Dashboard Overview
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-appointments">
+          <span>&#128197;</span> Manage Appointments
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-services">
+          <span>&#10024;</span> Manage Services (CRUD)
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-packages">
+          <span>&#128230;</span> Manage Packages
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-staff">
+          <span>&#128101;</span> Manage Staff
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-customers">
+          <span>&#128100;</span> Manage Customers
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-gallery">
+          <span>&#128444;</span> Manage Gallery
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-reviews">
+          <span>&#9733;</span> Customer Reviews
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-reports">
+          <span>&#128200;</span> Reports &amp; Analytics
+        </button>
+        <button type="button" class="dashboard-nav-btn admin-nav-btn" data-tab="adm-settings">
+          <span>&#9881;</span> Settings
+        </button>
+      </nav>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 0.5rem;">
+        <a href="index.html" class="dashboard-nav-btn" style="color: var(--color-gold);">
+          <span>&larr;</span> Return to Home
+        </a>
+        <button type="button" class="dashboard-nav-btn dashboard-logout-btn" style="color: #ff9d9d;">
+          <span>&#128682;</span> Staff Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Sidebar Backdrop for Mobile -->
+    <div class="dashboard-sidebar-backdrop" aria-hidden="true"></div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <div class="dashboard-topbar">
+        <button type="button" class="dashboard-mobile-toggle" aria-label="Toggle Admin Menu" aria-expanded="false">
+          <span class="dashboard-toggle-icon">&#9776;</span>
+          <span>Admin Menu</span>
+        </button>
+        <div class="dashboard-topbar-actions">
+          <button type="button" id="admin-add-service-btn" class="btn btn-primary btn-sm">+ Add New Service</button>
+        </div>
+      </div>
+
+      <!-- 1. TAB: Overview -->
+      <section class="admin-tab-panel" id="adm-overview">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Sanctuary Command Center</h2>
+            <p>Real-time salon operations, appointment velocity, and performance metrics.</p>
+          </div>
+        </div>
+
+        <!-- Admin Credentials Hero Card -->
+        <div class="dashboard-credentials-card">
+          <h2 class="credentials-welcome-title">
+            Welcome back, <span id="admin-credentials-welcome-name">Sophia Sterling</span> &#128081;
+          </h2>
+          <div class="credentials-meta-pills">
+            <span class="credentials-pill">
+              <span class="pill-icon">&#128100;</span>
+              <strong>Staff Director:</strong> <span id="admin-cred-pill-name">Sophia Sterling</span>
+            </span>
+            <span class="credentials-pill">
+              <span class="pill-icon">&#9993;</span>
+              <strong>Staff Email:</strong> <span id="admin-cred-pill-email">manager@glowandgrace.com</span>
+            </span>
+            <span class="credentials-pill">
+              <span class="pill-icon">&#128737;</span>
+              <strong>Role:</strong> <span id="admin-cred-pill-role">Sanctuary Director</span>
+            </span>
+            <span class="credentials-pill pill-active-session">
+              <span class="pulse-dot"></span>
+              <span>ADMIN SESSION ACTIVE</span>
+            </span>
+          </div>
+          <div class="credentials-actions">
+            <button type="button" class="btn credentials-btn-secondary" id="admin-cred-settings-btn">
+              &#9881; Salon Settings
+            </button>
+            <button type="button" class="btn credentials-btn-primary" onclick="document.getElementById('admin-add-service-btn').click();">
+              + Add New Service
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Key Stat Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">&#128197;</div>
+            <div class="stat-info">
+              <h3>148</h3>
+              <p>Total Bookings (Month)</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">&#128178;</div>
+            <div class="stat-info">
+              <h3>$12,450</h3>
+              <p>Sample Est. Revenue</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">&#128101;</div>
+            <div class="stat-info">
+              <h3>420</h3>
+              <p>Active Sanctuary Guests</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">&#9733;</div>
+            <div class="stat-info">
+              <h3>4.9 / 5.0</h3>
+              <p>Average Guest Rating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Appointments Card -->
+        <div class="table-card">
+          <div class="table-header-bar">
+            <h3>Recent Booking Log</h3>
+            <span class="badge badge-gold">Interactive Demo</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Ref ID</th>
+                  <th>Client</th>
+                  <th>Service / Package</th>
+                  <th>Scheduled Date</th>
+                  <th>Specialist</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-appointments-table-body">
+                <!-- Rendered dynamically by js/script.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. TAB: Manage Appointments -->
+      <section class="admin-tab-panel" id="adm-appointments" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Manage Appointments</h2>
+            <p>Filter by status, reassign specialists, or change reservation statuses.</p>
+          </div>
+          <div class="dashboard-header-actions" style="display: flex; gap: 0.75rem; align-items: center;">
+            <label for="admin-status-filter" style="font-size: 0.88rem; font-weight: 600;">Filter Status:</label>
+            <select id="admin-status-filter" class="form-control" style="width: 150px; padding: 0.45rem 0.75rem;">
+              <option value="all">All Statuses</option>
+              <option value="confirmed">Confirmed</option>
+              <option value="pending">Pending</option>
+              <option value="completed">Completed</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Ref ID</th>
+                  <th>Client</th>
+                  <th>Service / Package</th>
+                  <th>Scheduled Date</th>
+                  <th>Specialist</th>
+                  <th>Change Status</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="admin-appointments-table-body-2">
+                <!-- Re-uses renderAdminAppointments() -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. TAB: Manage Services (CRUD) -->
+      <section class="admin-tab-panel" id="adm-services" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Service Catalog Management</h2>
+            <p>Add new treatments, edit pricing, or remove outdated packages from the public menu.</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('admin-add-service-btn').click();">
+            + Add New Service
+          </button>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Thumbnail</th>
+                  <th>Service Title</th>
+                  <th>Category</th>
+                  <th>Sample Price</th>
+                  <th>Duration</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-services-table-body">
+                <!-- Rendered dynamically by js/script.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. TAB: Manage Packages -->
+      <section class="admin-tab-panel" id="adm-packages" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Package Bundles</h2>
+            <p>Manage tiered package combinations and durations.</p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Package configurations loaded.', 'info');">
+            Refresh Bundles
+          </button>
+        </div>
+
+        <div class="packages-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="package-card">
+            <h4>Essential Glow</h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">90 mins &bull; Sample: $85</p>
+            <p style="font-size: 0.85rem;">Basic Facial, Wash &amp; Styling, Basic Manicure</p>
+            <span class="badge badge-success" style="align-self: flex-start;">Active in Menu</span>
+          </div>
+
+          <div class="package-card">
+            <h4>Relax &amp; Rejuvenate</h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">150 mins &bull; Sample: $165</p>
+            <p style="font-size: 0.85rem;">Premium Facial, Hair Spa, Massage, Pedicure</p>
+            <span class="badge badge-success" style="align-self: flex-start;">Active in Menu</span>
+          </div>
+
+          <div class="package-card">
+            <h4>Bridal Radiance</h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">240 mins &bull; Sample: $280</p>
+            <p style="font-size: 0.85rem;">Bridal Consultation, Makeup, Updo, Prep</p>
+            <span class="badge badge-success" style="align-self: flex-start;">Active in Menu</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. TAB: Manage Staff -->
+      <section class="admin-tab-panel" id="adm-staff" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Master Specialists &amp; Artisans</h2>
+            <p>Staff profiles, specialties, and schedule assignment.</p>
+          </div>
+        </div>
+
+        <div class="experts-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+          <div class="expert-card">
+            <div class="expert-media" style="height: 200px;">
+              <img src="assets/images/expert-1.webp" alt="Elena Rostova">
+            </div>
+            <div class="expert-body">
+              <h4>Elena Rostova</h4>
+              <p class="expert-role">Master Hair Stylist</p>
+              <span class="badge badge-success">On Duty &bull; Suites 1-3</span>
+            </div>
+          </div>
+
+          <div class="expert-card">
+            <div class="expert-media" style="height: 200px;">
+              <img src="assets/images/expert-2.webp" alt="Priya Sharma">
+            </div>
+            <div class="expert-body">
+              <h4>Priya Sharma</h4>
+              <p class="expert-role">Senior Aesthetician</p>
+              <span class="badge badge-success">On Duty &bull; Facial Room A</span>
+            </div>
+          </div>
+
+          <div class="expert-card">
+            <div class="expert-media" style="height: 200px;">
+              <img src="assets/images/expert-3.webp" alt="Sophia Vance">
+            </div>
+            <div class="expert-body">
+              <h4>Sophia Vance</h4>
+              <p class="expert-role">Bridal Makeup Artist</p>
+              <span class="badge badge-success">On Duty &bull; Bridal Suite</span>
+            </div>
+          </div>
+
+          <div class="expert-card">
+            <div class="expert-media" style="height: 200px;">
+              <img src="assets/images/expert-4.webp" alt="Chloe Laurent">
+            </div>
+            <div class="expert-body">
+              <h4>Chloe Laurent</h4>
+              <p class="expert-role">Massage Therapist</p>
+              <span class="badge badge-success">On Duty &bull; Stone Suite</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. TAB: Manage Customers -->
+      <section class="admin-tab-panel" id="adm-customers" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Sanctuary Guest Directory</h2>
+            <p>Member contact records, total visits, and personal preferences.</p>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Client Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Tier</th>
+                  <th>Total Visits</th>
+                  <th>Sensitivities</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Camilla Davenport</strong></td>
+                  <td>camilla.d@example.com</td>
+                  <td>9876543210</td>
+                  <td><span class="badge badge-gold">Gold</span></td>
+                  <td>14 sessions</td>
+                  <td>Prefers cold-pressed oils</td>
+                </tr>
+                <tr>
+                  <td><strong>Aurelia Mendez</strong></td>
+                  <td>aurelia.m@example.com</td>
+                  <td>9123456789</td>
+                  <td><span class="badge badge-blush">Bridal VIP</span></td>
+                  <td>6 sessions</td>
+                  <td>None noted</td>
+                </tr>
+                <tr>
+                  <td><strong>Seraphina Lin</strong></td>
+                  <td>seraphina.lin@example.com</td>
+                  <td>9988776655</td>
+                  <td><span class="badge badge-gold">Gold</span></td>
+                  <td>22 sessions</td>
+                  <td>Back tension focus</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. TAB: Manage Gallery -->
+      <section class="admin-tab-panel" id="adm-gallery" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Manage Gallery Media</h2>
+            <p>Curate images displayed on the homepage and main gallery.</p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="showToast('Gallery sync complete.', 'info');">
+            Sync Gallery
+          </button>
+        </div>
+
+        <div style="background: var(--color-white); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); text-align: center;">
+          <p style="color: var(--color-text-muted);">
+            Currently displaying <strong>12 curated WebP photographs</strong> across salon interiors, hair styling, facials, bridal art, and spa rooms (all strictly under 100KB).
+          </p>
+          <a href="gallery.html" class="btn btn-primary btn-sm">Preview Live Gallery &rarr;</a>
+        </div>
+      </section>
+
+      <!-- 8. TAB: Reviews -->
+      <section class="admin-tab-panel" id="adm-reviews" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Customer Reviews &amp; Feedback</h2>
+            <p>Monitor guest ratings and post-treatment surveys.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="background: var(--color-white); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <strong>Camilla Davenport</strong>
+              <span class="text-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p style="font-size: 0.92rem; margin: 0; color: var(--color-text-muted);">
+              "Priya's facial treatment gave my skin an unbelievable glow! The atmosphere was pristine and tranquil."
+            </p>
+          </div>
+
+          <div style="background: var(--color-white); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <strong>Aurelia Mendez</strong>
+              <span class="text-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p style="font-size: 0.92rem; margin: 0; color: var(--color-text-muted);">
+              "Sophia and Elena did our bridal hair and makeup. Couldn't have asked for a calmer or more talented team."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. TAB: Reports -->
+      <section class="admin-tab-panel" id="adm-reports" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Reports &amp; Booking Velocity</h2>
+            <p>Monthly service utilization and performance analysis.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--color-white); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <h4 style="margin-bottom: 1rem;">Top Utilized Services this Month:</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem;">
+            <li style="display: flex; justify-content: space-between;">
+              <span>1. Facial Treatments &amp; Peels</span>
+              <strong>42 Sessions</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between;">
+              <span>2. Relaxing Body Massage</span>
+              <strong>36 Sessions</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between;">
+              <span>3. Haircut and Styling Blowout</span>
+              <strong>31 Sessions</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between;">
+              <span>4. Bridal Radiance Ceremonies</span>
+              <strong>18 Sessions</strong>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 10. TAB: Settings -->
+      <section class="admin-tab-panel" id="adm-settings" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Salon Configuration</h2>
+            <p>Operating hours, default deposit policies, and concierge notifications.</p>
+          </div>
+        </div>
+
+        <div class="form-card" style="max-width: 600px;">
+          <form onsubmit="event.preventDefault(); showToast('Salon configuration saved!', 'success');">
+            <div class="form-group">
+              <label class="form-label">Sanctuary Brand Name</label>
+              <input type="text" class="form-control" value="Glow & Grace" readonly>
+            </div>
+            <div class="form-group" style="margin-top: 1rem;">
+              <label class="form-label">Concierge Notification Email</label>
+              <input type="email" class="form-control" value="concierge@glowandgrace.com">
+            </div>
+            <div class="form-group" style="margin-top: 1rem;">
+              <label class="form-label">Currency Symbol</label>
+              <input type="text" class="form-control" value="$ (USD)" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">Save Settings</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add / Edit Service Modal -->
+  <div class="modal-backdrop" id="admin-service-modal" aria-modal="true" role="dialog" aria-label="Service Details Modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="service-modal-title">Add New Luxury Service</h3>
+        <button type="button" class="modal-close-btn" id="close-service-modal-btn">&times;</button>
+      </div>
+      <form id="admin-service-form">
+        <input type="hidden" id="service-edit-id" value="">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label">Service Title *</label>
+            <input type="text" id="srv-form-title" class="form-control" placeholder="e.g. 24K Gold Leaf Facial" required>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Category *</label>
+              <select id="srv-form-category" class="form-control" required>
+                <option value="Hair Care">Hair Care</option>
+                <option value="Skin & Facial">Skin &amp; Facial</option>
+                <option value="Makeup & Bridal">Makeup &amp; Bridal</option>
+                <option value="Nail Care">Nail Care</option>
+                <option value="Body & Massage">Body &amp; Massage</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Sample Price ($) *</label>
+              <input type="number" id="srv-form-price" class="form-control" placeholder="85" min="10" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Duration *</label>
+            <input type="text" id="srv-form-duration" class="form-control" placeholder="e.g. 75 mins" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Description *</label>
+            <textarea id="srv-form-desc" class="form-control" rows="3" placeholder="Detailed ritual description..." required></textarea>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="btn btn-secondary" onclick="document.getElementById('admin-service-modal').classList.remove('active');">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Save Service to Catalog
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Delete Action Confirmation Modal -->
+  <div class="modal-backdrop" id="admin-delete-modal" aria-modal="true" role="dialog" aria-label="Confirm Action Modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 style="color: var(--color-danger); margin: 0;">Confirm Removal</h3>
+        <button type="button" class="modal-close-btn" id="close-delete-modal-btn">&times;</button>
+      </div>
+      <p id="admin-delete-modal-msg" style="margin: 1.25rem 0; font-size: 1rem;">
+        Are you sure you wish to delete this item?
+      </p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="document.getElementById('admin-delete-modal').classList.remove('active');">
+          Keep Record
+        </button>
+        <button type="button" id="confirm-delete-action-btn" class="btn btn-danger">
+          Yes, Delete Record
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

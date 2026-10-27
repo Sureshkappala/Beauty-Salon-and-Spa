@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details | Glow &amp; Grace Luxury Salon &amp; Spa</title>
+  <meta name="description" content="Explore detailed treatment procedures, botanical ingredients, expected duration, and sample pricing for Glow & Grace signature rituals.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" aria-label="Glow and Grace Home">
+        <img src="assets/images/logo.png" alt="Glow and Grace Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="spa-treatments.html" class="nav-link">Spa Treatments</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Login</span>
+        </a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Appointment</a>
+        <button class="hamburger-btn" aria-label="Open mobile menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Drawer -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a href="index.html" aria-label="Glow and Grace Home">
+        <img src="assets/images/logo.png" alt="Stackly Glow and Grace Logo" class="brand-logo-img" style="height:36px;">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link active">Services</a>
+      <a href="spa-treatments.html" class="mobile-nav-link">Spa Treatments</a>
+      <a href="hair-styling.html" class="mobile-nav-link">Hair &amp; Styling</a>
+      <a href="skincare.html" class="mobile-nav-link">Skincare &amp; Facials</a>
+      <a href="bridal-makeup.html" class="mobile-nav-link">Bridal Makeup</a>
+      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+      <a href="packages.html" class="mobile-nav-link">Packages &amp; Pricing</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-secondary btn-sm" style="width: 100%;">Client Login</a>
+      <a href="booking.html" class="btn btn-primary btn-sm" style="width: 100%;">Book Appointment</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Breadcrumb & Hero -->
+    <section class="section section-blush" style="padding: 3rem 0;">
+      <div class="container">
+        <nav aria-label="Breadcrumb" style="font-size: 0.88rem; margin-bottom: 1.5rem; color: var(--color-text-muted);">
+          <a href="index.html" style="color: var(--color-gold);">Home</a> &nbsp;/&nbsp;
+          <a href="services.html" style="color: var(--color-gold);">Services</a> &nbsp;/&nbsp;
+          <span id="breadcrumb-current-title">Service Details</span>
+        </nav>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1.5rem;">
+          <div>
+            <span class="badge badge-gold" id="detail-category-badge">Signature Treatment</span>
+            <h1 id="detail-title" style="margin-top: 0.5rem;">Facial Treatments &amp; Peels</h1>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.85rem; color: var(--color-text-light);">Sample Starting Price</div>
+            <div style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 700; color: var(--color-primary);" id="detail-price">$95</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Service Content Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="service-detail-grid">
+          <!-- Left Column: Details & Procedure -->
+          <div>
+            <div style="border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 2.5rem; box-shadow: var(--shadow-md);">
+              <img id="detail-img" src="assets/images/service-facial.webp" alt="Facial treatment in progress" style="width: 100%; height: 420px; object-fit: cover;" width="800" height="550">
+            </div>
+
+            <h2 style="margin-bottom: 1rem;">Treatment Overview</h2>
+            <p id="detail-long-desc" style="font-size: 1.05rem; line-height: 1.8;">
+              Our signature facial ritual pairs gentle fruit-enzyme exfoliation with restorative botanical serums to clear dead surface debris and stimulate natural cellular vitality. Every step is curated to respect your delicate moisture mantle while enhancing dewy firmness.
+            </p>
+
+            <h3 style="margin: 2.5rem 0 1.25rem 0;">Step-by-Step Ceremony</h3>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="display: flex; gap: 1.25rem; background: var(--color-white); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-blush); color: var(--color-gold); font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Aesthetic Consultation &amp; Skin Analysis</h4>
+                  <p style="margin:0; font-size:0.9rem;">Evaluation of sebum balance, hydration levels, and sensitivities under soft polarized magnification.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1.25rem; background: var(--color-white); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-blush); color: var(--color-gold); font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Double Botanical Cleansing &amp; Steam</h4>
+                  <p style="margin:0; font-size:0.9rem;">Warm chamomile vapor softens pores followed by our sweet almond emulsifying balm and gentle papain enzyme buffing.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1.25rem; background: var(--color-white); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-blush); color: var(--color-gold); font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Lymphatic Drainage Sculpting Massage</h4>
+                  <p style="margin:0; font-size:0.9rem;">Rhythmic facial contouring using chilled quartz globes to release facial tension, depuff under-eyes, and sculpt cheek contours.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1.25rem; background: var(--color-white); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-blush); color: var(--color-gold); font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Nutrient Seal &amp; Mineral Sun Veil</h4>
+                  <p style="margin:0; font-size:0.9rem;">Application of hyaluronic hydration booster, ceramide barrier cream, and broad-spectrum zinc oxide protection.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem; background: var(--color-ivory-dark); padding: 1.75rem; border-radius: var(--radius-md); border-left: 4px solid var(--color-gold);">
+              <h4 style="margin-bottom: 0.5rem; color: var(--color-primary);">Responsible Care Guidelines</h4>
+              <p style="font-size: 0.9rem; margin: 0;">
+                All aesthetic treatments at Glow &amp; Grace are cosmetic and wellness procedures. We do not provide medical diagnosis or promise clinical cure of skin disorders. Please disclose any current prescription retinoids or skin allergies before your appointment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Booking Card & Meta Info -->
+          <div class="service-detail-sidebar">
+            <div class="form-card" style="padding: 2rem;">
+              <h3 style="margin-bottom: 1.25rem; font-size: 1.45rem;">Treatment Summary</h3>
+
+              <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.75rem;">
+                <div style="display: flex; justify-content: space-between; padding-bottom: 0.75rem; border-bottom: 1px solid var(--color-border);">
+                  <span style="color: var(--color-text-muted);">Duration:</span>
+                  <strong id="detail-duration">75 minutes</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding-bottom: 0.75rem; border-bottom: 1px solid var(--color-border);">
+                  <span style="color: var(--color-text-muted);">Recommended For:</span>
+                  <span>Dullness, Dehydration, Fatigue</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding-bottom: 0.75rem; border-bottom: 1px solid var(--color-border);">
+                  <span style="color: var(--color-text-muted);">Key Botanicals:</span>
+                  <span>Damask Rose, Papaya, Hyaluronic</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding-bottom: 0.75rem; border-bottom: 1px solid var(--color-border);">
+                  <span style="color: var(--color-text-muted);">Lead Specialist:</span>
+                  <span>Priya Sharma / Elena Rostova</span>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 1.5rem;">
+                <label style="font-size: 0.85rem; font-weight: 600; color: var(--color-primary); display:block; margin-bottom: 0.35rem;">Sample Starting Fee</label>
+                <div style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-gold); font-weight: 700;">$95 <span style="font-size:0.85rem; font-family:var(--font-sans); color:var(--color-text-light); font-weight:400;">(Demo pricing)</span></div>
+              </div>
+
+              <a id="detail-book-btn" href="booking.html?service=Facial+Treatments" class="btn btn-primary" style="width: 100%; margin-bottom: 0.75rem;">
+                Reserve This Treatment
+              </a>
+              <a href="services.html" class="btn btn-secondary" style="width: 100%;">
+                &larr; Back to Services Menu
+              </a>
+
+              <div style="margin-top: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--color-text-light);">
+                Need to customize? <a href="contact.html" style="color: var(--color-gold); text-decoration: underline;">Speak to our concierge</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Section 1: Step-by-Step Treatment Journey -->
+    <section class="section section-ivory-dark">
+      <div class="container">
+        <div class="section-intro-header">
+          <span class="sub-heading">What to Expect</span>
+          <h2>The Step-by-Step Treatment Journey</h2>
+          <p>Experience an orchestrated rhythm of sensory touch designed to renew mind and body.</p>
+        </div>
+        <div class="ritual-steps-grid">
+          <div class="luxury-card">
+            <span class="card-number-badge">Step 1</span>
+            <span class="card-tag">Welcome</span>
+            <h3>Scalp Acupressure &amp; Warm Compress</h3>
+            <p>Your session begins with a soothing warm towel compress and gentle scalp release to immediately signal your nervous system to relax.</p>
+          </div>
+          <div class="luxury-card">
+            <span class="card-number-badge">Step 2</span>
+            <span class="card-tag">Purification</span>
+            <h3>Botanical Cleansing &amp; Herbal Steam</h3>
+            <p>Deep impurities are gently softened through botanical micellar infusions and therapeutic eucalyptus floral misting.</p>
+          </div>
+          <div class="luxury-card">
+            <span class="card-number-badge">Step 3</span>
+            <span class="card-tag">Core Therapy</span>
+            <h3>Targeted Clinical Technique</h3>
+            <p>Master execution of your chosen ritual—whether precise haircut sculpting, deep lymphatic facial lifting, or heated stone release.</p>
+          </div>
+          <div class="luxury-card">
+            <span class="card-number-badge">Step 4</span>
+            <span class="card-tag">Sealing</span>
+            <h3>Cold Stone Sealing &amp; Herbal Elixir</h3>
+            <p>A chilled rose quartz seal locks in active plant peptides, concluded with an antioxidant tea infusion in the relaxation lounge.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Recommended Pairing Enhancements -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro-header">
+          <span class="sub-heading">Enhance Your Visit</span>
+          <h2>Recommended Ritual Add-Ons &amp; Enhancements</h2>
+          <p>Supercharge your appointment by pairing these popular 15-to-30 minute bespoke enhancements.</p>
+        </div>
+        <div class="pairing-grid">
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#10024;</div>
+            <span class="card-tag">+20 Mins &bull; $35</span>
+            <h3>24k Gold Hydrogel Eye Contour Infusion</h3>
+            <p>Targeted bio-collagen and colloidal gold patches that erase under-eye fatigue, brighten dark circles, and smooth expression lines.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#129306;</div>
+            <span class="card-tag">+15 Mins &bull; $25</span>
+            <h3>Warm Botanical Paraffin Hand Wrap</h3>
+            <p>Drenches dry, overworked hands in warm shea butter and lavender wax, soothing joint stiffness and restoring velvety softness.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128142;</div>
+            <span class="card-tag">+20 Mins &bull; $40</span>
+            <h3>Rose Quartz Gua Sha Facial Sculpt</h3>
+            <p>Cool crystal gua sha stones drain lymphatic fluid, chisel cheekbones, and relieve chronic jaw tension caused by clenching.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#127807;</div>
+            <span class="card-tag">+25 Mins &bull; $45</span>
+            <h3>Rosemary Scalp Detox &amp; Steam Cap</h3>
+            <p>Warm clarifying rosemary scrub massaged into the scalp under an aromatic steam hood to accelerate blood flow and root luster.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- Luxury Modern Footer (Stackly Reference Design) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-link" style="display: inline-block; margin-bottom: 1rem;">
+            <img src="assets/images/logo-footer.png" alt="Stackly Glow and Grace Logo" class="brand-logo-footer" width="130" height="42">
+          </a>
+          <p class="footer-desc">
+            A serene sanctuary of timeless beauty, organic wellness, and restorative tranquility. Nourishing your inner harmony and outer radiance since 2014.
+          </p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="X (Twitter)" title="X">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Glow &amp; Grace</a>
+            <a href="services.html">Services Menu</a>
+            <a href="spa-treatments.html">Spa Treatments</a>
+            <a href="packages.html">Packages &amp; Pricing</a>
+            <a href="gallery.html">Photo Gallery</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <!-- Support Column -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="404.html">Terms &amp; Agreements</a>
+            <a href="404.html">Security &amp; Hygiene Audits</a>
+            <a href="services.html">Sanctuary Service Details</a>
+            <a href="booking.html">Appointment Booking</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Get quarterly wellness updates, smart self-care alerts, and sanctuary feature reports.
+          </p>
+          <form class="newsletter-form" aria-label="Subscribe to Newsletter">
+            <input type="email" class="newsletter-input" placeholder="Your Email" required aria-label="Your Email Address">
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Glow &amp; Grace. All rights reserved. Designed for holistic beauty, relaxation, and wellness.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Audits</a>
+          <a href="login.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- Tiny page-specific parameter loader -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const srvParam = params.get('service');
+      const services = JSON.parse(localStorage.getItem('gg_services') || '[]');
+
+      if (srvParam && services.length) {
+        const found = services.find(s =>
+          s.id.toLowerCase().includes(srvParam.toLowerCase()) ||
+          s.title.toLowerCase().includes(srvParam.toLowerCase())
+        );
+
+        if (found) {
+          document.getElementById('breadcrumb-current-title').textContent = found.title;
+          document.getElementById('detail-title').textContent = found.title;
+          document.getElementById('detail-category-badge').textContent = found.category;
+          document.getElementById('detail-price').textContent = `$${found.price}`;
+          document.getElementById('detail-duration').textContent = found.duration;
+          document.getElementById('detail-long-desc').textContent = found.desc;
+          document.getElementById('detail-img').src = found.image;
+          document.getElementById('detail-book-btn').href = `booking.html?service=${encodeURIComponent(found.title)}`;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare &amp; Facials | Glow &amp; Grace Luxury Salon &amp; Spa</title>
+  <meta name="description" content="Nourish your complexion with organic botanical facials, deep dermal hydration, and gentle enzyme resurfacing at Glow & Grace.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" aria-label="Glow and Grace Home">
+        <img src="assets/images/logo.png" alt="Glow and Grace Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="spa-treatments.html" class="nav-link">Spa Treatments</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Login</span>
+        </a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Appointment</a>
+        <button class="hamburger-btn" aria-label="Open mobile menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Drawer -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a href="index.html" aria-label="Glow and Grace Home">
+        <img src="assets/images/logo.png" alt="Stackly Glow and Grace Logo" class="brand-logo-img" style="height:36px;">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="spa-treatments.html" class="mobile-nav-link">Spa Treatments</a>
+      <a href="hair-styling.html" class="mobile-nav-link">Hair &amp; Styling</a>
+      <a href="skincare.html" class="mobile-nav-link active">Skincare &amp; Facials</a>
+      <a href="bridal-makeup.html" class="mobile-nav-link">Bridal Makeup</a>
+      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+      <a href="packages.html" class="mobile-nav-link">Packages &amp; Pricing</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-secondary btn-sm" style="width: 100%;">Client Login</a>
+      <a href="booking.html" class="btn btn-primary btn-sm" style="width: 100%;">Book Appointment</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Header Banner -->
+    <section class="section section-blush" style="padding: 4.5rem 0 3.5rem 0; text-align: center;">
+      <div class="container container-narrow">
+        <span class="sub-heading">Clean Aesthetic Wellness</span>
+        <h1 style="margin-bottom: 1rem;">Clinical Botanical Skincare &amp; Facials</h1>
+        <p style="font-size: 1.15rem; color: var(--color-text-muted);">
+          Restorative skincare rituals harmonizing wild botanicals, pure hyaluronic moisture, and gentle lymphatic drainage to awaken your skin's natural luminance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skincare Protocols Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-facial.webp" alt="Restorative Enzyme Facial" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Radiance</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Enzyme Radiance Facial</h3>
+              <p class="service-card-desc">Papaya and pomegranate fruit enzyme buffing to gently dissolve dead cell buildup without irritation, followed by calming rose hydro-mist.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 75 mins</span>
+                <span class="service-price">$95 <span>sample price</span></span>
+              </div>
+              <a href="booking.html?service=Facial+Treatments" class="btn btn-primary btn-sm">Book This Facial</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-skincare.webp" alt="Hydra Dermal Therapy" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Deep Moisture</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Triple Hyaluronic Barrier Infusion</h3>
+              <p class="service-card-desc">Multi-depth hydration surge targeting dry, compromised barriers with bioactive ceramides, squalane, and cryo quartz sculpting.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 90 mins</span>
+                <span class="service-price">$110 <span>sample price</span></span>
+              </div>
+              <a href="booking.html?service=Skin+Care" class="btn btn-primary btn-sm">Book This Facial</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/gallery-skin-1.webp" alt="Post-Facial Dewy Skin" loading="lazy" width="800" height="600">
+              <span class="service-card-category">Antioxidant Glow</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Wild Rose &amp; Vitamin C Ceremony</h3>
+              <p class="service-card-desc">Cold-pressed rosehip seed oil and gentle stabilized botanical vitamin C to brighten complexion tone and enhance elasticity.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 80 mins</span>
+                <span class="service-price">$105 <span>sample price</span></span>
+              </div>
+              <a href="booking.html?service=Facial+Treatments" class="btn btn-primary btn-sm">Book This Facial</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aesthetician Insight -->
+    <section class="section section-ivory-dark">
+      <div class="container">
+        <div class="about-preview-grid">
+          <div class="about-preview-content">
+            <span class="sub-heading">Clinical Aesthetician Priya Sharma</span>
+            <h2>"Work With Your Skin Mantle, Never Against It"</h2>
+            <p>
+              "Aggressive stripping and harsh chemical peels frequently trigger long-term barrier degradation and rebound sensitivity. At Glow &amp; Grace, our philosophy centers on replenishing the lipid matrix, stimulating micro-circulation through skilled tactile sculpting, and allowing your epidermis to breathe."
+            </p>
+            <div style="background:var(--color-blush-subtle); padding:1.5rem; border-radius:var(--radius-md); border:1px solid var(--color-border); margin:1.5rem 0;">
+              <h4 style="margin-bottom:0.5rem; color:var(--color-primary);">Priya's Skin Health Philosophy:</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.5rem;">&bull; <strong>Gentle Exfoliation:</strong> Enzymatic rather than abrasive manual scrubs preserve the stratum corneum.</p>
+              <p style="font-size:0.9rem; margin-bottom:0.5rem;">&bull; <strong>Tactile Drainage:</strong> Lymphatic strokes remove stagnant interstitial fluid to naturally depuff.</p>
+              <p style="font-size:0.9rem; margin:0;">&bull; <strong>Pure Lipids:</strong> Organic plant oils emulate sebum for biocompatible nourishment.</p>
+            </div>
+            <a href="booking.html?service=Skin+Care" class="btn btn-primary">Reserve Consultation with Priya</a>
+          </div>
+
+          <div class="about-preview-images">
+            <img src="assets/images/expert-2.webp" alt="Priya Sharma senior aesthetician" class="about-img-1" loading="lazy" width="600" height="700">
+            <img src="assets/images/about-philosophy.webp" alt="Botanical skincare elements" class="about-img-2" loading="lazy" width="900" height="650">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer Note -->
+    <section class="section">
+      <div class="container container-narrow text-center">
+        <div style="background: var(--color-white); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Wellness &amp; Aesthetic Notice</h4>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">
+            All facial and skin therapy procedures at Glow &amp; Grace are cosmetic and designed solely for aesthetic relaxation, skin hygiene, and appearance enhancement. We make no diagnosis, medical claims, or cure guarantees. For chronic dermatological conditions, please consult a board-certified dermatologist.
+          </p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Section 1: Clinical Botanical Diagnostic Mapping -->
+    <section class="section section-ivory-dark">
+      <div class="container">
+        <div class="section-intro-header">
+          <span class="sub-heading">Clinical Botanicals</span>
+          <h2>Personalized Skin Diagnostic &amp; Barrier Health Protocol</h2>
+          <p>We blend dermatological precision with cold-pressed bio-certified botanicals for lasting cellular renewal.</p>
+        </div>
+        <div class="standards-grid">
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128167;</div>
+            <span class="card-tag">Hydration Index</span>
+            <h3>Transepidermal Water Loss (TEWL) Assessment</h3>
+            <p>We measure lipid barrier integrity, identifying microscopic moisture evaporation before prescribing barrier-repairing ceramides.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#127807;</div>
+            <span class="card-tag">Apothecary Mix</span>
+            <h3>Custom-Compounded Botanical Ampoules</h3>
+            <p>Freshly blended at your suite counter with wild elderberry, squalane, niacinamide, and rosehip oils matched to that day's skin status.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128142;</div>
+            <span class="card-tag">Non-Invasive Sculpt</span>
+            <h3>Microcurrent Cellular Contouring</h3>
+            <p>Low-voltage electrical microcurrent stimulates ATP cellular production, gently lifting cheekbones and de-puffing under-eye lymph nodes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Skincare FAQs -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro-header">
+          <span class="sub-heading">Skin Wisdom</span>
+          <h2>Skincare Ritual FAQs &amp; Post-Facial Care</h2>
+          <p>Essential guidance to maximize the longevity of your radiant post-facial glow.</p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h4>How should I prepare my skin before a facial ritual?</h4>
+            <p>Pause retinoids, glycolic acids, and physical scrubs 48 hours beforehand. Arriving without makeup is helpful, though our therapist will perform a double botanical oil cleanse upon arrival.</p>
+          </div>
+          <div class="faq-card">
+            <h4>Can I apply makeup immediately after my facial?</h4>
+            <p>We advise giving your skin a 12-hour rest to absorb active botanical peptides and hyaluronic acids. If attending an event, we apply an organic mineral tinted SPF with a featherlight finish.</p>
+          </div>
+          <div class="faq-card">
+            <h4>What interval is best for professional facial treatments?</h4>
+            <p>A monthly visit synchronizes perfectly with your skin's natural 28-day cellular turnover cycle. For bridal prep or hyperpigmentation correction, bi-weekly rituals are ideal.</p>
+          </div>
+          <div class="faq-card">
+            <h4>Are these therapies safe for sensitive rosacea-prone skin?</h4>
+            <p>Yes. We have specialized calming protocols using cold rose quartz globes, blue chamomile, and colloidal oatmeal that soothe inflammation without heat or aggressive friction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- Luxury Modern Footer (Stackly Reference Design) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-link" style="display: inline-block; margin-bottom: 1rem;">
+            <img src="assets/images/logo-footer.png" alt="Stackly Glow and Grace Logo" class="brand-logo-footer" width="130" height="42">
+          </a>
+          <p class="footer-desc">
+            A serene sanctuary of timeless beauty, organic wellness, and restorative tranquility. Nourishing your inner harmony and outer radiance since 2014.
+          </p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="X (Twitter)" title="X">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Glow &amp; Grace</a>
+            <a href="services.html">Services Menu</a>
+            <a href="spa-treatments.html">Spa Treatments</a>
+            <a href="packages.html">Packages &amp; Pricing</a>
+            <a href="gallery.html">Photo Gallery</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <!-- Support Column -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="404.html">Terms &amp; Agreements</a>
+            <a href="404.html">Security &amp; Hygiene Audits</a>
+            <a href="services.html">Sanctuary Service Details</a>
+            <a href="booking.html">Appointment Booking</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Get quarterly wellness updates, smart self-care alerts, and sanctuary feature reports.
+          </p>
+          <form class="newsletter-form" aria-label="Subscribe to Newsletter">
+            <input type="email" class="newsletter-input" placeholder="Your Email" required aria-label="Your Email Address">
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Glow &amp; Grace. All rights reserved. Designed for holistic beauty, relaxation, and wellness.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Audits</a>
+          <a href="login.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

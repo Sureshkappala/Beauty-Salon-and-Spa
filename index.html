@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow & Grace | Luxury Beauty Salon & Spa Sanctuary</title>
+  <meta name="description" content="Welcome to Glow & Grace, an ultra-luxury beauty salon and wellness spa sanctuary offering bespoke hair styling, organic skincare, therapeutic massage, and bridal artistry.">
+  <meta name="keywords" content="beauty salon, luxury spa, hair styling, facials, skincare, bridal makeup, massage, nail art, wellness">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" aria-label="Glow and Grace Home">
+        <img src="assets/images/logo.png" alt="Glow and Grace Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="spa-treatments.html" class="nav-link">Spa Treatments</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Login</span>
+        </a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Appointment</a>
+        <button class="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Mobile Drawer Backdrop & Drawer -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a href="index.html" aria-label="Glow and Grace Home">
+        <img src="assets/images/logo.png" alt="Stackly Glow and Grace Logo" class="brand-logo-img" style="height:36px;">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="spa-treatments.html" class="mobile-nav-link">Spa Treatments</a>
+      <a href="hair-styling.html" class="mobile-nav-link">Hair &amp; Styling</a>
+      <a href="skincare.html" class="mobile-nav-link">Skincare &amp; Facials</a>
+      <a href="bridal-makeup.html" class="mobile-nav-link">Bridal Makeup</a>
+      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+      <a href="packages.html" class="mobile-nav-link">Packages &amp; Pricing</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-secondary btn-sm" style="width: 100%;">Client Login</a>
+      <a href="booking.html" class="btn btn-primary btn-sm" style="width: 100%;">Book Appointment</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tagline">
+            <span class="text-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span>Award-Winning Luxury Beauty Sanctuary</span>
+          </div>
+          <h1 class="hero-title">
+            Your Beauty, Our Passion. <br>
+            <span>Your Wellness, Our Priority.</span>
+          </h1>
+          <p class="hero-description">
+            Step into an oasis of calm elegance. Glow &amp; Grace combines bespoke hair styling, clinical-grade organic botanical skincare, and transformative spa therapies designed to rejuvenate your body, mind, and spirit.
+          </p>
+          <div class="hero-buttons">
+            <a href="booking.html" class="btn btn-primary btn-lg">Book Your Appointment</a>
+            <a href="services.html" class="btn btn-secondary btn-lg">Explore Treatments</a>
+          </div>
+          <div class="hero-highlights">
+            <div class="hero-stat">
+              <span class="hero-stat-number">12+</span>
+              <span class="hero-stat-label">Years of Artistry</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">100%</span>
+              <span class="hero-stat-label">Organic Botanical Care</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">4.9/5</span>
+              <span class="hero-stat-label">Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-wrapper">
+            <!-- Main hero loaded eagerly as requested -->
+            <img src="assets/images/hero-main.webp" alt="Glow and Grace luxury salon lounge with warm ambient lighting" width="1200" height="750" loading="eager" fetchpriority="high">
+          </div>
+          <div class="hero-floating-card">
+            <div class="hero-floating-icon">&#10024;</div>
+            <div>
+              <strong style="display:block; font-size:0.95rem; color:var(--color-primary);">Pure Rejuvenation</strong>
+              <small style="color:var(--color-text-light);">Customized Care Plans</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Welcome to Glow & Grace -->
+    <section class="section section-ivory-dark" id="welcome">
+      <div class="container">
+        <div class="about-preview-grid">
+          <div class="about-preview-images">
+            <img src="assets/images/about-intro.webp" alt="Serene spa suite with fresh flowers and warm towels" class="about-img-1" loading="lazy" width="1000" height="700">
+            <img src="assets/images/about-philosophy.webp" alt="Organic essential oils and skincare botanicals" class="about-img-2" loading="lazy" width="900" height="650">
+            <div class="about-experience-badge">
+              <strong>12</strong>
+              <span>Years of Grace</span>
+            </div>
+          </div>
+
+          <div class="about-preview-content">
+            <span class="sub-heading">Welcome to Glow &amp; Grace</span>
+            <h2>Where Artistry Meets Tranquil Wellness</h2>
+            <p>
+              Founded with a belief that true beauty flourishes from deep tranquility, Glow &amp; Grace is a luxury retreat nestled away from city rush. Our master aestheticians and world-class stylists harmonize holistic therapies with modern aesthetic innovations.
+            </p>
+            <p>
+              From custom corrective scalp treatments to revitalizing enzyme facials, every appointment is a curated ceremony devoted exclusively to your wellbeing and personal elegance.
+            </p>
+
+            <div class="values-list">
+              <div class="value-item">
+                <div class="value-icon">&#10003;</div>
+                <div>
+                  <h4>Certified Master Stylists</h4>
+                  <p>Internationally trained artists dedicated to individual aesthetics.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">&#10003;</div>
+                <div>
+                  <h4>Clinical Botanical Purity</h4>
+                  <p>Cruelty-free, paraben-free organic formulations that nourish skin deeply.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">&#10003;</div>
+                <div>
+                  <h4>Private Sanitized Suites</h4>
+                  <p>Individual suites with medical-grade air filtration and gentle acoustic warmth.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">&#10003;</div>
+                <div>
+                  <h4>Tailored Consultations</h4>
+                  <p>In-depth diagnosis before every color, hair treatment, or facial session.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn btn-secondary">Read Our Philosophy &amp; Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Our Signature Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-heading">Curated Offerings</span>
+          <h2>Our Signature Services</h2>
+          <p>Indulge in our full spectrum of head-to-toe beauty and wellness treatments, crafted with meticulous detail and personalized care.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Haircut and Styling -->
+          <article class="service-card" data-category="hair">
+            <div class="service-card-media">
+              <img src="assets/images/service-haircut.webp" alt="Precision haircut and luxury styling in progress" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Hair Care</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Haircut and Styling</h3>
+              <p class="service-card-desc">Consultative dry or wet precision scissor cut, soothing botanical wash, and our signature salon blowout.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 60 mins</span>
+                <span class="service-price">$65 <span>sample from</span></span>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=haircut" class="btn btn-secondary btn-sm">Details</a>
+                <a href="booking.html?service=Haircut+and+Styling" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Hair Coloring -->
+          <article class="service-card" data-category="hair">
+            <div class="service-card-media">
+              <img src="assets/images/service-haircolor.webp" alt="Dimensional hair coloring and balayage highlights" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Hair Care</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Hair Coloring &amp; Balayage</h3>
+              <p class="service-card-desc">Bespoke dimensional highlights, gloss glazes, and scalp-shielding organic color infusions.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 120 mins</span>
+                <span class="service-price">$135 <span>sample from</span></span>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=haircolor" class="btn btn-secondary btn-sm">Details</a>
+                <a href="booking.html?service=Hair+Coloring" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Facial Treatments -->
+          <article class="service-card" data-category="skin">
+            <div class="service-card-media">
+              <img src="assets/images/service-facial.webp" alt="Woman receiving relaxing facial with soothing eye pads" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Skin &amp; Facial</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Facial Treatments &amp; Peels</h3>
+              <p class="service-card-desc">Gentle fruit-enzyme exfoliation, pore cleansing, lymphatic sculpting massage, and botanical nutrient mask.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 75 mins</span>
+                <span class="service-price">$95 <span>sample from</span></span>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=facial" class="btn btn-secondary btn-sm">Details</a>
+                <a href="booking.html?service=Facial+Treatments" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Makeup Services -->
+          <article class="service-card" data-category="makeup">
+            <div class="service-card-media">
+              <img src="assets/images/service-makeup.webp" alt="Makeup artist applying luxury eyeshadow pigments" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Makeup &amp; Bridal</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Makeup Services &amp; Glamour</h3>
+              <p class="service-card-desc">Editorial, gala, and red carpet beauty applications using clean, camera-ready mineral pigments.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 60 mins</span>
+                <span class="service-price">$80 <span>sample from</span></span>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=makeup" class="btn btn-secondary btn-sm">Details</a>
+                <a href="booking.html?service=Makeup+Services" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Relaxing Body Massage -->
+          <article class="service-card" data-category="spa">
+            <div class="service-card-media">
+              <img src="assets/images/service-massage.webp" alt="Therapeutic back massage with warm herbal oils" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Spa &amp; Body</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Relaxing Body Massage</h3>
+              <p class="service-card-desc">Harmonious Swedish bodywork and warm sweet almond oils to relieve chronic stress and muscle tightness.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 90 mins</span>
+                <span class="service-price">$120 <span>sample from</span></span>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=massage" class="btn btn-secondary btn-sm">Details</a>
+                <a href="booking.html?service=Relaxing+Body+Massage" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Manicure & Pedicure -->
+          <article class="service-card" data-category="nails">
+            <div class="service-card-media">
+              <img src="assets/images/service-manicure.webp" alt="Spa manicure with rose petals and precision nail care" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Nail Care</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Manicure and Pedicure</h3>
+              <p class="service-card-desc">Rose-water herbal soak, gentle sugar buffing, cuticle softening, precision filing, and hand massage.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 70 mins</span>
+                <span class="service-price">$60 <span>sample from</span></span>
+              </div>
+              <div class="service-card-actions">
+                <a href="service-details.html?service=manicure" class="btn btn-secondary btn-sm">Details</a>
+                <a href="booking.html?service=Manicure+and+Pedicure" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top: 2rem;">
+          <a href="services.html" class="btn btn-primary btn-lg">View Complete 12-Service Menu &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Popular Treatments Highlight -->
+    <section class="section section-blush" id="popular">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-heading">Guest Favorites</span>
+          <h2>Most Requested Treatments</h2>
+          <p>Our most celebrated wellness rituals favored by discerning guests for transformative glow and deep relaxation.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-hairspa.webp" alt="Restorative hair mask and steam treatment" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Restorative</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Moroccan Argan Hair Spa</h3>
+              <p class="service-card-desc">Deep-conditioning mask, hot towel wrap, and 20-minute acupressure head massage to restore vitality to distressed hair.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 75 mins</span>
+                <span class="service-price">$85 <span>sample price</span></span>
+              </div>
+              <a href="booking.html?service=Hair+Spa+and+Treatments" class="btn btn-primary btn-sm">Book This Treatment</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-skincare.webp" alt="Facial serum treatment for radiant skin" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Clinical Wellness</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Hydra-Infusion Glow Facial</h3>
+              <p class="service-card-desc">Triple molecular hyaluronic acid serum infusion and cryo cooling globes for an immediate red-carpet dewy complexion.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 90 mins</span>
+                <span class="service-price">$110 <span>sample price</span></span>
+              </div>
+              <a href="booking.html?service=Skin+Care" class="btn btn-primary btn-sm">Book This Treatment</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="assets/images/service-aromatherapy.webp" alt="Pure aromatherapy oils and incense" loading="lazy" width="800" height="550">
+              <span class="service-card-category">Holistic Spa</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Aromatherapy Stone Serenity</h3>
+              <p class="service-card-desc">Organic lavender and sweet orange essential oils combined with smooth basalt stones to release deep muscular tension.</p>
+              <div class="service-card-meta">
+                <span class="service-duration">&#128337; 90 mins</span>
+                <span class="service-price">$130 <span>sample price</span></span>
+              </div>
+              <a href="booking.html?service=Aromatherapy" class="btn btn-primary btn-sm">Book This Treatment</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Why Choose Us -->
+    <section class="section" id="why-us">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-heading">The Glow &amp; Grace Distinction</span>
+          <h2>Why Choose Our Sanctuary</h2>
+          <p>We blend timeless hospitality with modern aesthetic mastery to ensure every second of your visit is pure tranquility.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-box">&#10024;</div>
+            <h3>Licensed Specialists</h3>
+            <p>Every stylist and aesthetician holds advanced certifications with continuous international training in holistic care.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">&#127807;</div>
+            <h3>100% Organic Products</h3>
+            <p>We exclusively select sustainably harvested botanical extracts free of harsh sulfates, parabens, and micro-plastics.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">&#128142;</div>
+            <h3>Tailored Consultations</h3>
+            <p>We never apply a one-size-fits-all formula. Every service begins with a one-on-one consultation regarding your goals.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">&#128716;</div>
+            <h3>Pristine Hygiene</h3>
+            <p>Hospital-grade autoclave sterilization, disposable single-use linens, and HEPA air purification in all private suites.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Beauty Transformation Gallery -->
+    <section class="section section-ivory-dark" id="gallery-preview">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-heading">Artistry &amp; Elegance</span>
+          <h2>Beauty Transformation Gallery</h2>
+          <p>Explore glimpses of our salon floor, private treatment rooms, radiant bridal styling, and intricate nail art.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-gallery-category="interiors">
+            <img src="assets/images/gallery-interior-1.webp" alt="Luminous salon floor with marble counters and warm lighting" loading="lazy" width="800" height="600">
+            <div class="gallery-overlay">
+              <h4 class="gallery-caption">Main Styling Atelier</h4>
+              <span class="gallery-category">Salon Interiors</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-gallery-category="hair">
+            <img src="assets/images/gallery-hair-1.webp" alt="Client with glossy caramel balayage waves" loading="lazy" width="800" height="600">
+            <div class="gallery-overlay">
+              <h4 class="gallery-caption">Caramel Balayage Waves</h4>
+              <span class="gallery-category">Hair Transformations</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-gallery-category="bridal">
+            <img src="assets/images/gallery-bridal-1.webp" alt="Bride with radiant makeup look and delicate floral veil" loading="lazy" width="800" height="600">
+            <div class="gallery-overlay">
+              <h4 class="gallery-caption">Romantic Bridal Radiance</h4>
+              <span class="gallery-category">Bridal Makeup</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-gallery-category="nails">
+            <img src="assets/images/gallery-nails-1.webp" alt="Soft neutral gel manicure with gold foil accents" loading="lazy" width="800" height="600">
+            <div class="gallery-overlay">
+              <h4 class="gallery-caption">Rose Gold Leaf Polish</h4>
+              <span class="gallery-category">Nail Art</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-gallery-category="spa">
+            <img src="assets/images/gallery-spa-1.webp" alt="Private candlelit massage room with warmed stones" loading="lazy" width="800" height="600">
+            <div class="gallery-overlay">
+              <h4 class="gallery-caption">Private Stone Suite</h4>
+              <span class="gallery-category">Spa Treatment Rooms</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-gallery-category="skin">
+            <img src="assets/images/gallery-skin-1.webp" alt="Dewy and refreshed glowing skin after treatment" loading="lazy" width="800" height="600">
+            <div class="gallery-overlay">
+              <h4 class="gallery-caption">Dewy Complexion Results</h4>
+              <span class="gallery-category">Skincare Results</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-gallery-category="spa">
+            <img src="assets/images/gallery-interior-2.webp" alt="Private tranquil botanical spa suite" loading="lazy" width="800" height="600">
+            <div class="gallery-overlay">
+              <h4 class="gallery-caption">Botanical Spa Suite</h4>
+              <span class="gallery-category">Spa Treatment Rooms</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-gallery-category="transformations">
+            <img src="assets/images/gallery-transformation.webp" alt="Complete evening glamour makeover" loading="lazy" width="800" height="600">
+            <div class="gallery-overlay">
+              <h4 class="gallery-caption">Evening Glamour Makeover</h4>
+              <span class="gallery-category">Beauty Transformations</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 2rem;">
+          <a href="gallery.html" class="btn btn-secondary btn-lg">Explore Full Gallery with Categories &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Our Signature Packages -->
+    <section class="section" id="packages">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-heading">Curated Bundles</span>
+          <h2>Our Signature Wellness Packages</h2>
+          <p>Indulge in our synchronized combinations designed for complete head-to-toe renewal. Configurable sample pricing.</p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Package 1: Essential Glow -->
+          <div class="package-card">
+            <div class="package-header">
+              <h3 class="package-name">Essential Glow</h3>
+              <p class="package-tagline">Perfect midday refresher for effortless radiance</p>
+              <div class="package-price-wrap">
+                <span class="package-currency">$</span>
+                <span class="package-price">85</span>
+              </div>
+              <div class="package-duration">&#128337; 90 minutes total session</div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Basic Facial:</strong> Enzyme exfoliation and hydrating mist</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Hair Wash &amp; Styling:</strong> Botanical wash and salon blowout</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Basic Manicure:</strong> Clean cuticle shaping and natural polish</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span>Complimentary herbal infusion tea</span>
+              </li>
+            </ul>
+            <a href="booking.html?package=Essential+Glow" class="btn btn-secondary">Select Essential Glow</a>
+            <span class="package-disclaimer">*Configurable sample price for demonstration</span>
+          </div>
+
+          <!-- Package 2: Relax & Rejuvenate (Featured) -->
+          <div class="package-card featured">
+            <span class="package-badge-top">Most Popular Sanctuary Ritual</span>
+            <div class="package-header">
+              <h3 class="package-name">Relax &amp; Rejuvenate</h3>
+              <p class="package-tagline">Comprehensive deep restoration for body, face, and mind</p>
+              <div class="package-price-wrap">
+                <span class="package-currency">$</span>
+                <span class="package-price">165</span>
+              </div>
+              <div class="package-duration">&#128337; 150 minutes total session</div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Premium Facial:</strong> Deep pore cleansing and hyaluronic infusion</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Hair Spa Treatment:</strong> Moroccan argan steam scalp therapy</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Relaxing Massage:</strong> 60-min Swedish tension release therapy</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Deluxe Pedicure:</strong> Eucalyptus soak and foot massage</span>
+              </li>
+            </ul>
+            <a href="booking.html?package=Relax+and+Rejuvenate" class="btn btn-primary">Select Relax &amp; Rejuvenate</a>
+            <span class="package-disclaimer">*Configurable sample price for demonstration</span>
+          </div>
+
+          <!-- Package 3: Bridal Radiance -->
+          <div class="package-card">
+            <div class="package-header">
+              <h3 class="package-name">Bridal Radiance</h3>
+              <p class="package-tagline">The ultimate regal ritual for brides and celebrations</p>
+              <div class="package-price-wrap">
+                <span class="package-currency">$</span>
+                <span class="package-price">280</span>
+              </div>
+              <div class="package-duration">&#128337; 240 minutes total session</div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Bridal Consultation:</strong> Tone matching &amp; look rehearsal</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Bridal Makeup Session:</strong> Waterproof airbrush &amp; lash accents</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Hairstyling:</strong> Couture bridal updo, curl pinning &amp; veil setting</span>
+              </li>
+              <li class="package-feature">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                <span><strong>Beauty Preparation:</strong> Rose body polish &amp; gel manicure</span>
+              </li>
+            </ul>
+            <a href="booking.html?package=Bridal+Radiance" class="btn btn-secondary">Select Bridal Radiance</a>
+            <span class="package-disclaimer">*Configurable sample price for demonstration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Meet Our Experts -->
+    <section class="section section-ivory-dark" id="experts">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-heading">Master Artisans</span>
+          <h2>Meet Our Beauty Experts</h2>
+          <p>Passionate artists and licensed therapists committed to personalizing your transformation with gentle precision.</p>
+        </div>
+
+        <div class="experts-grid">
+          <div class="expert-card">
+            <div class="expert-media">
+              <img src="assets/images/expert-1.webp" alt="Elena Rostova, master hair stylist" loading="lazy" width="600" height="700">
+            </div>
+            <div class="expert-body">
+              <h3 class="expert-name">Elena Rostova</h3>
+              <p class="expert-role">Master Hair Stylist &amp; Colorist</p>
+              <p class="expert-bio">Over 14 years specializing in French balayage, keratin restoration, and precision dimensional cutting.</p>
+            </div>
+          </div>
+
+          <div class="expert-card">
+            <div class="expert-media">
+              <img src="assets/images/expert-2.webp" alt="Priya Sharma, senior clinical aesthetician" loading="lazy" width="600" height="700">
+            </div>
+            <div class="expert-body">
+              <h3 class="expert-name">Priya Sharma</h3>
+              <p class="expert-role">Senior Aesthetician</p>
+              <p class="expert-bio">Certified dermal therapist specializing in enzyme skin resurfacing, cellular hydration, and lymphatic drainage.</p>
+            </div>
+          </div>
+
+          <div class="expert-card">
+            <div class="expert-media">
+              <img src="assets/images/expert-3.webp" alt="Sophia Vance, master bridal makeup artist" loading="lazy" width="600" height="700">
+            </div>
+            <div class="expert-body">
+              <h3 class="expert-name">Sophia Vance</h3>
+              <p class="expert-role">Bridal &amp; Editorial Makeup Artist</p>
+              <p class="expert-bio">Celebrated for ethereal luminous bridal artistry that accentuates natural facial symmetry and enduring glamour.</p>
+            </div>
+          </div>
+
+          <div class="expert-card">
+            <div class="expert-media">
+              <img src="assets/images/expert-4.webp" alt="Chloe Laurent, lead holistic wellness therapist" loading="lazy" width="600" height="700">
+            </div>
+            <div class="expert-body">
+              <h3 class="expert-name">Chloe Laurent</h3>
+              <p class="expert-role">Holistic Wellness &amp; Massage</p>
+              <p class="expert-bio">Trained in Swiss bodywork, neuromuscular release, and therapeutic aromatherapy essential oil blends.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Client Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-heading">Client Stories</span>
+          <h2>Loved by Discerning Guests</h2>
+          <p>Read genuine testimonials from clients who trust Glow &amp; Grace for their most memorable occasions.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">
+              "The moment you walk into Glow &amp; Grace, the ambient scent of lavender and gentle music immediately melts your stress away. Priya's facial gave my skin a glow I had never seen before!"
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img src="assets/images/testimonial-1.webp" alt="Camilla Davenport client photo" loading="lazy" width="300" height="300">
+              </div>
+              <div>
+                <h4 class="testimonial-name">Camilla Davenport</h4>
+                <span class="testimonial-meta">Monthly Sanctuary Guest &bull; Demo Review</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">
+              "Sophia and Elena took care of my entire bridal party. My hair and makeup held impeccably through an emotional ceremony and 6 hours of dancing. They are genuine master artists."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img src="assets/images/testimonial-2.webp" alt="Aurelia Mendez client photo" loading="lazy" width="300" height="300">
+              </div>
+              <div>
+                <h4 class="testimonial-name">Aurelia Mendez</h4>
+                <span class="testimonial-meta">Bridal Client &bull; Demo Review</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">
+              "The Relax &amp; Rejuvenate package was the most restorative 2.5 hours of my entire year. The massage relieved neck tension I'd carried for months. An absolute must-visit sanctuary."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img src="assets/images/testimonial-3.webp" alt="Seraphina Lin client photo" loading="lazy" width="300" height="300">
+              </div>
+              <div>
+                <h4 class="testimonial-name">Seraphina Lin</h4>
+                <span class="testimonial-meta">Spa Member &bull; Demo Review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Final Call to Action -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <div class="cta-box">
+          <span class="sub-heading" style="color: var(--color-gold-bright);">Reserve Your Moment</span>
+          <h2 class="cta-title">Make Time for Yourself</h2>
+          <p class="cta-desc">
+            Your body and skin deserve thoughtful attention. Reserve your bespoke appointment today and experience the serene harmony of Glow &amp; Grace.
+          </p>
+          <a href="booking.html" class="btn btn-primary btn-lg">Book Your Appointment Now</a>
+
+          <div class="cta-info-bar">
+            <div class="cta-info-item">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>428 Blossom Boulevard, Luxury Plaza, Suite 300</span>
+            </div>
+            <div class="cta-info-item">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(555) 849-GLOW / (555) 849-4569</span>
+            </div>
+            <div class="cta-info-item">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Mon - Sat: 9:00 AM – 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal for Gallery Preview -->
+  <div class="lightbox-modal" id="gallery-lightbox" aria-modal="true" role="dialog" aria-label="Image Lightbox Viewer">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close viewer">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#10094;</button>
+      <button class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-img" src="" alt="Gallery Image preview">
+      </div>
+      <div class="lightbox-caption-bar">
+        <div class="lightbox-title" id="lightbox-caption">Transformation Title</div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Luxury Modern Footer (Stackly Reference Design) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-link" style="display: inline-block; margin-bottom: 1rem;">
+            <img src="assets/images/logo-footer.png" alt="Stackly Glow and Grace Logo" class="brand-logo-footer" width="130" height="42">
+          </a>
+          <p class="footer-desc">
+            A serene sanctuary of timeless beauty, organic wellness, and restorative tranquility. Nourishing your inner harmony and outer radiance since 2014.
+          </p>
+          <div class="footer-socials">
+            <a href="404.html" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="X (Twitter)" title="X">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="Instagram" title="Instagram">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="404.html" class="social-link" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Glow &amp; Grace</a>
+            <a href="services.html">Services Menu</a>
+            <a href="spa-treatments.html">Spa Treatments</a>
+            <a href="packages.html">Packages &amp; Pricing</a>
+            <a href="gallery.html">Photo Gallery</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <!-- Support Column -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="404.html">Terms &amp; Agreements</a>
+            <a href="404.html">Security &amp; Hygiene Audits</a>
+            <a href="services.html">Sanctuary Service Details</a>
+            <a href="booking.html">Appointment Booking</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Get quarterly wellness updates, smart self-care alerts, and sanctuary feature reports.
+          </p>
+          <form class="newsletter-form" aria-label="Subscribe to Newsletter">
+            <input type="email" class="newsletter-input" placeholder="Your Email" required aria-label="Your Email Address">
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Glow &amp; Grace. All rights reserved. Designed for holistic beauty, relaxation, and wellness.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Audits</a>
+          <a href="login.html">Client Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

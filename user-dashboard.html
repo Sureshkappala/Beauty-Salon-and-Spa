@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Client Portal | Glow &amp; Grace Luxury Salon &amp; Spa</title>
+  <meta name="description" content="View your scheduled appointments, past beauty rituals, saved favorite services, and membership profile at Glow & Grace.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="user-dashboard-view">
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="dashboard-sidebar" aria-label="User Dashboard Sidebar">
+      <div class="dashboard-sidebar-header">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <a href="user-dashboard.html" aria-label="User Dashboard">
+            <img src="assets/images/logo-footer.png" alt="Stackly Logo" style="height: 36px; display: block;">
+          </a>
+          <button type="button" class="dashboard-sidebar-close" aria-label="Close dashboard sidebar">&times;</button>
+        </div>
+        <div class="dashboard-user-card">
+          <div class="dashboard-avatar" id="user-avatar-initials">K</div>
+          <div class="dashboard-user-info">
+            <h4 id="user-display-name">kappalasuresh92</h4>
+            <span id="user-display-tier">Verified VIP Client</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="dashboard-nav-list">
+        <button type="button" class="dashboard-nav-btn user-nav-btn active" data-tab="tab-overview">
+          <span>&#9632;</span> Dashboard Overview
+        </button>
+        <button type="button" class="dashboard-nav-btn user-nav-btn" data-tab="tab-appointments">
+          <span>&#128197;</span> My Appointments
+        </button>
+        <button type="button" class="dashboard-nav-btn user-nav-btn" data-tab="tab-upcoming">
+          <span>&#9200;</span> Upcoming Appointments
+        </button>
+        <button type="button" class="dashboard-nav-btn user-nav-btn" data-tab="tab-history">
+          <span>&#128337;</span> Booking History
+        </button>
+        <button type="button" class="dashboard-nav-btn user-nav-btn" data-tab="tab-favorites">
+          <span>&#10084;</span> Favorite Services
+        </button>
+        <button type="button" class="dashboard-nav-btn user-nav-btn" data-tab="tab-packages">
+          <span>&#10024;</span> My Beauty Packages
+        </button>
+        <button type="button" class="dashboard-nav-btn user-nav-btn" data-tab="tab-profile">
+          <span>&#128100;</span> Profile
+        </button>
+        <button type="button" class="dashboard-nav-btn user-nav-btn" data-tab="tab-settings">
+          <span>&#9881;</span> Settings
+        </button>
+      </nav>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 0.5rem;">
+        <a href="index.html" class="dashboard-nav-btn" style="color: var(--color-gold);">
+          <span>&larr;</span> Return to Home
+        </a>
+        <button type="button" class="dashboard-nav-btn dashboard-logout-btn" style="color: #ff9d9d;">
+          <span>&#128682;</span> Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Sidebar Backdrop for Mobile -->
+    <div class="dashboard-sidebar-backdrop" aria-hidden="true"></div>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <div class="dashboard-topbar">
+        <button type="button" class="dashboard-mobile-toggle" aria-label="Toggle Dashboard Menu" aria-expanded="false">
+          <span class="dashboard-toggle-icon">&#9776;</span>
+          <span>Dashboard Menu</span>
+        </button>
+        <div class="dashboard-topbar-actions">
+          <a href="booking.html" class="btn btn-primary btn-sm">+ Book New Session</a>
+        </div>
+      </div>
+
+      <!-- 1. TAB: Overview -->
+      <section class="dashboard-tab-panel" id="tab-overview">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Client Overview</h2>
+            <p>Welcome back to your private wellness &amp; beauty console.</p>
+          </div>
+        </div>
+
+        <!-- User Credentials Hero Card -->
+        <div class="dashboard-credentials-card">
+          <h2 class="credentials-welcome-title">
+            Welcome back, <span id="credentials-welcome-name">kappalasuresh92</span> &#128075;
+          </h2>
+          <div class="credentials-meta-pills">
+            <span class="credentials-pill">
+              <span class="pill-icon">&#128100;</span>
+              <strong>Name:</strong> <span id="cred-pill-name">kappalasuresh92</span>
+            </span>
+            <span class="credentials-pill">
+              <span class="pill-icon">&#9993;</span>
+              <strong>Email:</strong> <span id="cred-pill-email">kappalasuresh92@gmail.com</span>
+            </span>
+            <span class="credentials-pill">
+              <span class="pill-icon">&#128737;</span>
+              <strong>Role:</strong> <span id="cred-pill-role">Verified VIP Client</span>
+            </span>
+            <span class="credentials-pill pill-active-session">
+              <span class="pulse-dot"></span>
+              <span>ACTIVE SESSION</span>
+            </span>
+          </div>
+          <div class="credentials-actions">
+            <button type="button" class="btn credentials-btn-secondary" id="cred-settings-btn">
+              &#9881; Account Settings
+            </button>
+            <a href="booking.html" class="btn credentials-btn-primary">
+              + Book New Ritual
+            </a>
+          </div>
+        </div>
+
+        <!-- Metric KPI Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">&#128197;</div>
+            <div class="stat-info">
+              <h3>2</h3>
+              <p>Active Appointments</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">&#10024;</div>
+            <div class="stat-info">
+              <h3>1,450</h3>
+              <p>Sanctuary Reward Points</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">&#10084;</div>
+            <div class="stat-info">
+              <h3>4</h3>
+              <p>Favorite Treatments</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">&#128081;</div>
+            <div class="stat-info">
+              <h3>Gold</h3>
+              <p>Membership Tier</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appointments Table Card -->
+        <div class="table-card">
+          <div class="table-header-bar">
+            <h3>Recent Appointments</h3>
+            <a href="booking.html" class="btn btn-secondary btn-sm">Schedule Service</a>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Service</th>
+                  <th>Specialist</th>
+                  <th>Date &amp; Time</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="user-appointments-list">
+                <!-- Dynamically populated from localStorage via js/script.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. TAB: My Appointments -->
+      <section class="dashboard-tab-panel" id="tab-appointments" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>All Appointments</h2>
+            <p>Complete record of active, upcoming, and past reservations.</p>
+          </div>
+          <a href="booking.html" class="btn btn-primary btn-sm">New Booking</a>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Service</th>
+                  <th>Specialist</th>
+                  <th>Date &amp; Time</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="user-all-appointments-list">
+                <!-- Same dynamic rendering -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. TAB: Upcoming Appointments -->
+      <section class="dashboard-tab-panel" id="tab-upcoming" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Upcoming Appointments</h2>
+            <p>Confirmed and pending sessions scheduled for future dates.</p>
+          </div>
+        </div>
+        <div id="user-upcoming-list">
+          <!-- Rendered via JS -->
+        </div>
+      </section>
+
+      <!-- 4. TAB: Booking History -->
+      <section class="dashboard-tab-panel" id="tab-history" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Booking History</h2>
+            <p>Review past treatments and completed wellness ceremonies.</p>
+          </div>
+        </div>
+        <div id="user-history-list">
+          <!-- Rendered via JS -->
+        </div>
+      </section>
+
+      <!-- 5. TAB: Favorite Services -->
+      <section class="dashboard-tab-panel" id="tab-favorites" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Favorite Services</h2>
+            <p>Quick re-booking for your regular self-care rituals.</p>
+          </div>
+        </div>
+        <div class="services-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="service-card">
+            <div class="service-card-media" style="height: 180px;">
+              <img src="assets/images/service-facial.webp" alt="Facial treatment">
+            </div>
+            <div class="service-card-body">
+              <h4>Facial Treatments &amp; Peels</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">With Senior Aesthetician Priya Sharma</p>
+              <a href="booking.html?service=Facial+Treatments" class="btn btn-primary btn-sm">Re-Book Now</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-media" style="height: 180px;">
+              <img src="assets/images/service-massage.webp" alt="Massage therapy">
+            </div>
+            <div class="service-card-body">
+              <h4>Relaxing Body Massage</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">With Chloe Laurent</p>
+              <a href="booking.html?service=Relaxing+Body+Massage" class="btn btn-primary btn-sm">Re-Book Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. TAB: My Beauty Packages -->
+      <section class="dashboard-tab-panel" id="tab-packages" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>My Active Beauty Packages</h2>
+            <p>Track multi-treatment series and prepaid sessions.</p>
+          </div>
+          <a href="packages.html" class="btn btn-primary btn-sm">Browse Packages</a>
+        </div>
+
+        <div style="background: var(--color-white); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <div class="user-package-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <div>
+              <span class="badge badge-gold">Active Pass</span>
+              <h3 style="margin-top: 0.35rem;">Relax &amp; Rejuvenate Series</h3>
+            </div>
+            <div style="text-align: right;">
+              <strong style="font-size: 1.25rem; color: var(--color-primary);">2 of 4 Sessions Used</strong>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+            Includes remaining 1x Moroccan Argan Hair Spa and 1x Deluxe Spa Pedicure. Valid until December 31, 2026.
+          </p>
+          <a href="booking.html?package=Relax+and+Rejuvenate" class="btn btn-secondary btn-sm">Schedule Next Remaining Session</a>
+        </div>
+      </section>
+
+      <!-- 7. TAB: Profile -->
+      <section class="dashboard-tab-panel" id="tab-profile" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>My Profile &amp; Preferences</h2>
+            <p>Manage your contact details and treatment sensitivities.</p>
+          </div>
+        </div>
+
+        <div class="form-card" style="max-width: 650px;">
+          <form id="user-profile-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" id="user-profile-name" class="form-control" value="">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" id="user-profile-email" class="form-control" value="">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Mobile Number</label>
+                <input type="tel" id="user-profile-phone" class="form-control" value="">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Tea / Beverage</label>
+                <input type="text" class="form-control" value="Lavender Chamomile Infusion">
+              </div>
+              <div class="form-group form-full">
+                <label class="form-label">Known Allergies / Skin Sensitivities</label>
+                <textarea class="form-control" rows="3">Mild sensitivity to synthetic benzoyl peroxide. Prefers cold-pressed botanical oils.</textarea>
+              </div>
+              <div class="form-group form-full">
+                <button type="submit" class="btn btn-primary">Save Profile Changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 8. TAB: Settings -->
+      <section class="dashboard-tab-panel" id="tab-settings" style="display: none;">
+        <div class="dashboard-header-bar">
+          <div>
+            <h2>Account Settings</h2>
+            <p>Notification preferences and security.</p>
+          </div>
+        </div>
+
+        <div class="form-card" style="max-width: 600px;">
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border);">
+              <div>
+                <strong style="display: block;">SMS Appointment Reminders</strong>
+                <small style="color: var(--color-text-light);">Receive a notification 24 hours prior to appointment.</small>
+              </div>
+              <input type="checkbox" checked style="accent-color: var(--color-gold); width: 18px; height: 18px;">
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border);">
+              <div>
+                <strong style="display: block;">Email Journal &amp; Invoices</strong>
+                <small style="color: var(--color-text-light);">Receive digital receipts and seasonal skincare guides.</small>
+              </div>
+              <input type="checkbox" checked style="accent-color: var(--color-gold); width: 18px; height: 18px;">
+            </div>
+
+            <button type="button" class="btn btn-secondary btn-sm" style="align-self: flex-start;" onclick="showToast('Password reset link sent to your registered email.', 'info');">
+              Change Account Password
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Cancel Appointment Confirmation Modal -->
+  <div class="modal-backdrop" id="cancel-appointment-modal" aria-modal="true" role="dialog" aria-label="Cancel Appointment Prompt">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 style="margin: 0; color: var(--color-danger);">Cancel Appointment</h3>
+        <button type="button" class="modal-close-btn" id="close-cancel-modal-btn">&times;</button>
+      </div>
+      <p style="margin: 1rem 0; font-size: 1rem;">
+        Are you sure you wish to cancel your scheduled appointment for <strong id="cancel-modal-service-name">this treatment</strong>?
+      </p>
+      <p style="font-size: 0.85rem; color: var(--color-text-light);">
+        Our cancellation policy requests at least 12 hours notice. You can reschedule anytime without penalty.
+      </p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="document.getElementById('cancel-appointment-modal').classList.remove('active');">
+          Keep Appointment
+        </button>
+        <button type="button" id="confirm-cancel-appointment-btn" class="btn btn-danger">
+          Yes, Cancel Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
