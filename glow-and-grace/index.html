@@ -78,51 +78,83 @@
   </aside>
 
   <main>
-    <!-- 1. Hero Section -->
+    <!-- 1. Hero Section (Award-Winning Luxury Portfolio Design) -->
     <section class="hero" id="home">
+      <!-- Ambient Floating Glow Orbs -->
+      <div class="hero-glow-orb orb-1" aria-hidden="true"></div>
+      <div class="hero-glow-orb orb-2" aria-hidden="true"></div>
+      <div class="hero-glow-orb orb-3" aria-hidden="true"></div>
+
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="hero-tagline">
-            <span class="text-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
             <span>Award-Winning Luxury Beauty Sanctuary</span>
+            <span class="hero-tag-badge">Est. 2014</span>
           </div>
+
           <h1 class="hero-title">
-            Your Beauty, Our Passion. <br>
-            <span>Your Wellness, Our Priority.</span>
+            <span class="hero-title-line">Your Beauty, Our Passion.</span>
+            <span class="hero-title-line"><span class="hero-gradient-text">Your Wellness,</span> Our Priority.</span>
           </h1>
+
           <p class="hero-description">
-            Step into an oasis of calm elegance. Glow &amp; Grace combines bespoke hair styling, clinical-grade organic botanical skincare, and transformative spa therapies designed to rejuvenate your body, mind, and spirit.
+            Step into an oasis of calm elegance. Glow &amp; Grace unites bespoke hair artistry, clinical-grade organic botanical skincare, and transformative spa rituals designed to replenish body, mind, and spirit.
           </p>
+
           <div class="hero-buttons">
-            <a href="booking.html" class="btn btn-primary btn-lg">Book Your Appointment</a>
-            <a href="services.html" class="btn btn-secondary btn-lg">Explore Treatments</a>
+            <a href="booking.html" class="btn btn-primary btn-lg">
+              <span>Book Your Appointment</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="services.html" class="btn btn-secondary btn-lg">
+              <span>Explore Treatments</span>
+            </a>
           </div>
+
           <div class="hero-highlights">
             <div class="hero-stat">
-              <span class="hero-stat-number">12+</span>
+              <span class="hero-stat-number" data-target="12" data-suffix="+">0+</span>
               <span class="hero-stat-label">Years of Artistry</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-number">100%</span>
+              <span class="hero-stat-number" data-target="100" data-suffix="%">0%</span>
               <span class="hero-stat-label">Organic Botanical Care</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-number">4.9/5</span>
+              <span class="hero-stat-number" data-target="4.9" data-suffix="/5" data-decimals="1">0.0/5</span>
               <span class="hero-stat-label">Client Satisfaction</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-media">
-          <div class="hero-image-wrapper">
-            <!-- Main hero loaded eagerly as requested -->
-            <img src="assets/images/hero-main.webp" alt="Glow and Grace luxury salon lounge with warm ambient lighting" width="1200" height="750" loading="eager" fetchpriority="high">
+        <div class="hero-media hero-tilt-container" id="hero-tilt-wrap">
+          <div class="hero-image-frame">
+            <div class="hero-image-wrapper">
+              <!-- Main hero loaded eagerly as requested -->
+              <img src="assets/images/hero-main.webp" alt="Glow and Grace luxury salon lounge with warm ambient lighting" width="1200" height="750" loading="eager" fetchpriority="high">
+              <div class="hero-image-shimmer" aria-hidden="true"></div>
+            </div>
           </div>
-          <div class="hero-floating-card">
+
+          <!-- Floating Badge 1: Top-Right Glass Card -->
+          <div class="hero-floating-card hero-floating-top">
+            <div class="hero-floating-rating-box">
+              <div class="hero-stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <strong style="display:block; font-size:0.92rem; color:var(--color-primary); margin-top:2px;">4.9 / 5.0 Rating</strong>
+              <small style="color:var(--color-text-muted); font-size:0.75rem;">1,400+ Verified Guests</small>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2: Bottom-Left Glass Card -->
+          <div class="hero-floating-card hero-floating-bottom">
             <div class="hero-floating-icon">&#10024;</div>
             <div>
-              <strong style="display:block; font-size:0.95rem; color:var(--color-primary);">Pure Rejuvenation</strong>
-              <small style="color:var(--color-text-light);">Customized Care Plans</small>
+              <div style="display: flex; align-items: center; gap: 0.45rem; margin-bottom: 2px;">
+                <span class="hero-pulse-dot"></span>
+                <strong style="display:block; font-size:0.92rem; color:var(--color-primary);">Pure Rejuvenation</strong>
+              </div>
+              <small style="color:var(--color-text-muted); font-size:0.75rem;">100% Bio-Certified Botanicals</small>
             </div>
           </div>
         </div>

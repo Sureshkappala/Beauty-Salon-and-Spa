@@ -1642,9 +1642,110 @@ function initScrollReveal() {
 
 // Auto-run on DOM ready or immediate if already loaded
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initScrollReveal);
+  document.addEventListener('DOMContentLoaded', () => {
+    initScrollReveal();
+    initHeroPortfolioAnimations();
+  });
 } else {
   initScrollReveal();
+  initHeroPortfolioAnimations();
 }
+
+/* ==========================================================================
+   16. Hero Portfolio-Level Interactive 3D Parallax & Live Counters
+   ========================================================================== */
+function initHeroPortfolioAnimations() {
+  const heroSection = document.querySelector('.hero');
+  const tiltWrap = document.getElementById('hero-tilt-wrap');
+  const floatingTop = document.querySelector('.hero-floating-top');
+  const floatingBottom = document.querySelector('.hero-floating-bottom');
+
+  // 1. Interactive 3D Parallax on Desktop
+  if (heroSection && tiltWrap && window.matchMedia('(min-width: 992px)').matches) {
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let isHovering = false;
+
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      mouseX = x;
+      mouseY = y;
+      isHovering = true;
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+      isHovering = false;
+      mouseX = 0;
+      mouseY = 0;
+    });
+
+    function updateParallax() {
+      // Smooth spring interpolation
+      currentX += (mouseX - currentX) * 0.08;
+      currentY += (mouseY - currentY) * 0.08;
+
+      if (isHovering || Math.abs(currentX) > 0.001 || Math.abs(currentY) > 0.001) {
+        const rotY = currentX * 14;
+        const rotX = -currentY * 14;
+        tiltWrap.style.transform = `perspective(1100px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg)`;
+
+        if (floatingTop) {
+          floatingTop.style.transform = `translate3d(${(currentX * 24).toFixed(1)}px, ${(currentY * 24).toFixed(1)}px, 40px)`;
+        }
+        if (floatingBottom) {
+          floatingBottom.style.transform = `translate3d(${(-currentX * 20).toFixed(1)}px, ${(-currentY * 20).toFixed(1)}px, 35px)`;
+        }
+      } else {
+        tiltWrap.style.transform = 'perspective(1100px) rotateX(0deg) rotateY(0deg)';
+        if (floatingTop) floatingTop.style.transform = '';
+        if (floatingBottom) floatingBottom.style.transform = '';
+      }
+
+      requestAnimationFrame(updateParallax);
+    }
+
+    requestAnimationFrame(updateParallax);
+  }
+
+  // 2. Animated Live Stat Counters (Portfolio Count-Up)
+  const counterElements = document.querySelectorAll('.hero-stat-number[data-target]');
+  if (counterElements.length) {
+    const startCounting = () => {
+      counterElements.forEach((el) => {
+        const target = parseFloat(el.getAttribute('data-target'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        const duration = 2200;
+        const startTime = performance.now();
+
+        const step = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = easeOut * target;
+
+          el.textContent = currentVal.toFixed(decimals) + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target.toFixed(decimals) + suffix;
+          }
+        };
+
+        requestAnimationFrame(step);
+      });
+    };
+
+    // Trigger after brief entrance delay
+    setTimeout(startCounting, 350);
+  }
+}
+
 
 
