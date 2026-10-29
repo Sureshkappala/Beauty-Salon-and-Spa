@@ -13,10 +13,11 @@
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column;">
 
-  <main style="flex-grow: 1; display: flex; align-items: center; padding: 4.5rem 0 3.5rem 0;">
-    <div class="container text-center">
-      <div style="max-width: 600px; margin: 0 auto;">
-        <a href="index.html" style="display: inline-block; margin-bottom: 2rem;" aria-label="Return to Homepage">
+    <main style="flex-grow: 1; padding: 3rem 0;">
+    <!-- Section 1: 404 Hero Error Card -->
+    <section class="section section-blush" style="padding: 3.5rem 0; text-align: center;">
+      <div class="container container-narrow">
+        <a href="index.html" style="display: inline-block; margin-bottom: 1.5rem;" aria-label="Return to Homepage">
           <img src="assets/images/logo.png" alt="Stackly Glow and Grace Logo" style="height: 48px; display: block; margin: 0 auto;">
         </a>
         <span class="sub-heading" style="color: var(--color-gold); display: block;">Error 404</span>
@@ -28,7 +29,7 @@
           The beauty treatment or page you are looking for has either moved to a new suite or does not exist in our catalog.
         </p>
 
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
           <a href="index.html" class="btn btn-primary btn-lg">
             Back to Home
           </a>
@@ -36,21 +37,109 @@
             &larr; Go Back
           </button>
         </div>
+      </div>
+    </section>
 
-        <div style="border-top: 1px solid var(--color-border); padding-top: 2rem;">
-          <span style="font-size: 0.85rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">
-            Quick Destinations
-          </span>
-          <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.95rem;">
-            <a href="services.html" style="color: var(--color-gold); font-weight: 500;">Services Menu</a>
-            <a href="packages.html" style="color: var(--color-gold); font-weight: 500;">Packages &amp; Pricing</a>
-            <a href="gallery.html" style="color: var(--color-gold); font-weight: 500;">Photo Gallery</a>
-            <a href="contact.html" style="color: var(--color-gold); font-weight: 500;">Contact Concierge</a>
-            <a href="booking.html" style="color: var(--color-gold); font-weight: 500;">Book Appointment</a>
+    <!-- Section 2: Quick Destinations Portals -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro-header">
+          <span class="sub-heading">Explore Sanctuary</span>
+          <h2>Popular Salon Destinations</h2>
+          <p>Easily navigate back to our most celebrated luxury wellness suites.</p>
+        </div>
+        <div class="standards-grid">
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128135;</div>
+            <span class="card-tag">Hair Artistry</span>
+            <h3>Haircut &amp; Styling Suite</h3>
+            <p>Bespoke precision haircuts, luxury organic blowouts, and restorative scalp therapy.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#10024;</div>
+            <span class="card-tag">Skincare</span>
+            <h3>Skin &amp; Facial Therapies</h3>
+            <p>Revitalizing botanical peels, 24K gold infusions, and LED dermal rejuvenation.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#127807;</div>
+            <span class="card-tag">Wellness</span>
+            <h3>Spa &amp; Body Rituals</h3>
+            <p>Holistic aromatherapy massage, Himalayan salt scrubs, and mineral hydrotherapy.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128080;</div>
+            <span class="card-tag">Bridal</span>
+            <h3>Bridal &amp; Event Artistry</h3>
+            <p>Couture bridal hairstyles, airbrush makeup, and private wedding party glam suites.</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Section 3: Concierge Help & Immediate Assistance -->
+    <section class="section section-ivory-dark">
+      <div class="container text-center">
+        <span class="sub-heading">Concierge Assistance</span>
+        <h2>Need Immediate Direction?</h2>
+        <p style="max-width: 650px; margin: 0.5rem auto 2rem auto; color: var(--color-text-muted);">
+          Our dedicated salon guest concierge is available 7 days a week to guide your reservations and answer inquiries.
+        </p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" style="color: var(--color-gold); font-weight: 600; text-decoration: underline;">Contact Concierge Team &rarr;</a>
+          <a href="services.html" style="color: var(--color-gold); font-weight: 600; text-decoration: underline;">Browse All Services &rarr;</a>
+          <a href="packages.html" style="color: var(--color-gold); font-weight: 600; text-decoration: underline;">View Curated Packages &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Frequently Consulted Information -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro-header">
+          <span class="sub-heading">Guest Questions</span>
+          <h2>Frequently Addressed Inquiries</h2>
+          <p>Common questions from guests who encounter missing links or outdated bookmarks.</p>
+        </div>
+        <div class="standards-grid">
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128269;</div>
+            <span class="card-tag">Search</span>
+            <h3>Where did the previous service link go?</h3>
+            <p>Our seasonal treatment menu has been updated with enhanced organic formulas and newly introduced suites.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128197;</div>
+            <span class="card-tag">Appointments</span>
+            <h3>Is my existing booking safe?</h3>
+            <p>Yes. All confirmed client appointments remain fully active in our concierge reservation database.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128222;</div>
+            <span class="card-tag">Telephone</span>
+            <h3>Direct Hotline Assistance</h3>
+            <p>Speak with our receptionist desk directly at (555) 849-GLOW for real-time confirmation.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128663;</div>
+            <span class="card-tag">Arrival</span>
+            <h3>Physical Salon Address</h3>
+            <p>428 Blossom Boulevard, Luxury Plaza, Suite 300. Valet parking is available at the central court.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: The Glow & Grace Hospitality Promise -->
+    <section class="section section-blush">
+      <div class="container text-center">
+        <span class="sub-heading">Our Promise</span>
+        <h2>Unconditional Hospitality &amp; Care</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--color-text-muted);">
+          Every moment at Glow &amp; Grace is crafted to provide harmony, serenity, and unparalleled wellness.
+        </p>
+      </div>
+    </section>
   </main>
 
     <!-- Luxury Modern Footer (Stackly Reference Design) -->

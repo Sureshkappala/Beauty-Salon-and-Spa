@@ -35,7 +35,7 @@
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
           <span>Login</span>
         </a>
-        <a href="booking.html" class="btn btn-primary btn-sm">Book Appointment</a>
+        <a href="404.html" class="btn btn-primary btn-sm">Book Appointment</a>
         <button class="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -67,13 +67,15 @@
       <a href="contact.html" class="mobile-nav-link">Contact Us</a>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="login.html" class="btn btn-secondary btn-sm" style="width: 100%;">Client Login</a>
-      <a href="booking.html" class="btn btn-primary btn-sm" style="width: 100%;">Book Appointment</a>
+      <a href="404.html" class="btn btn-secondary btn-sm" style="width: 100%;">Client Login</a>
+      <a href="404.html" class="btn btn-primary btn-sm" style="width: 100%;">Book Appointment</a>
     </div>
   </aside>
 
-  <main style="padding: 4rem 0;">
-    <div class="container">
+  <main style="padding: 2rem 0; flex-grow: 1;">
+    <!-- Section 1: Reservation Confirmation Summary -->
+    <section class="section" style="padding: 2.5rem 0;">
+      <div class="container">
       <div class="confirmation-card" id="confirmation-summary-details">
         <div class="confirmation-icon">&#10003;</div>
         <span class="sub-heading" style="color: var(--color-success);">Reservation Recorded</span>
@@ -143,10 +145,10 @@
 
         <!-- Action Buttons -->
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="index.html" class="btn btn-secondary">
+          <a href="404.html" class="btn btn-secondary">
             &larr; Return to Homepage
           </a>
-          <a href="user-dashboard.html" class="btn btn-primary">
+          <a href="404.html" class="btn btn-primary">
             View in User Dashboard &rarr;
           </a>
           <button type="button" id="print-confirmation-btn" class="btn btn-white">
@@ -155,6 +157,77 @@
         </div>
       </div>
     </div>
+    </section>
+    
+    <!-- Section 2: Pre-Arrival Check-in & Valet Parking -->
+    <section class="section section-ivory-dark">
+      <div class="container">
+        <div class="section-intro-header">
+          <span class="sub-heading">Arrival Guide</span>
+          <h2>Effortless Arrival &amp; Check-In</h2>
+          <p>Important details for your upcoming sanctuary visit.</p>
+        </div>
+        <div class="standards-grid">
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128663;</div>
+            <span class="card-tag">Parking</span>
+            <h3>Complimentary Valet</h3>
+            <p>Pull up to the Blossom Plaza main fountain; our valet attendants will park your vehicle securely.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#9200;</div>
+            <span class="card-tag">Timing</span>
+            <h3>15-Minute Early Arrival</h3>
+            <p>Arrive 15 minutes before your treatment time to change into heated linens and enjoy herbal tea.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128243;</div>
+            <span class="card-tag">Serenity</span>
+            <h3>Silent Mobile Atmosphere</h3>
+            <p>Treatment rooms and hydrothermal suites are quiet zones to allow total restorative mindfulness.</p>
+          </div>
+          <div class="luxury-card">
+            <div class="card-icon-badge">&#128105;&#8205;&#9877;&#65039;</div>
+            <span class="card-tag">Artisan</span>
+            <h3>Dedicated Specialist</h3>
+            <p>Your chosen therapist or stylist will welcome you directly from our quiet decompression lounge.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Relaxation Lounge & Tea Ceremony -->
+    <section class="section">
+      <div class="container text-center">
+        <span class="sub-heading">Sanctuary Comfort</span>
+        <h2>Complimentary Aromatherapy &amp; Tea Ritual</h2>
+        <p style="max-width: 600px; margin: 0.5rem auto 2rem auto; color: var(--color-text-muted);">
+          Every session begins with a soothing hot-towel hand wrap and your choice of organic calming infusions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: Flexible Rescheduling Terms -->
+    <section class="section section-ivory-dark">
+      <div class="container text-center">
+        <span class="sub-heading">Policy Courtesy</span>
+        <h2>24-Hour Rescheduling Policy</h2>
+        <p style="max-width: 600px; margin: 0.5rem auto; color: var(--color-text-muted);">
+          Need to shift your appointment time? Simply contact our concierge team at least 24 hours prior.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Concierge Contact & Dedicated Specialist Support -->
+    <section class="section section-blush">
+      <div class="container text-center">
+        <span class="sub-heading">Questions?</span>
+        <h2>Concierge Desk: (555) 849-GLOW</h2>
+        <p style="max-width: 600px; margin: 0.5rem auto; color: var(--color-text-muted);">
+          We look forward to welcoming you to your Glow &amp; Grace rejuvenation ritual.
+        </p>
+      </div>
+    </section>
   </main>
 
     <!-- Luxury Modern Footer (Stackly Reference Design) -->

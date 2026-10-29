@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initButton404Redirect();
   initStorage();
   initNavbar();
   initAccordions();
@@ -795,7 +796,7 @@ function initAuthForms() {
     const confirmPass = document.getElementById('reg-confirm-password')?.value;
     const role = document.getElementById('reg-role')?.value || 'user';
 
-    if (!name || !/^[a-zA-Z\s]{2,50}$/.test(name)) {
+    if (!name || /\d/.test(name) || !/^[a-zA-Z\s]{2,50}$/.test(name)) {
       showToast('Please enter a valid full name (letters only).', 'danger');
       return;
     }
@@ -1492,6 +1493,37 @@ function initAccordions() {
    ========================================================================== */
 function initContactForm() {
   const contactForm = document.getElementById('salon-contact-form');
+  const nameInput = document.getElementById('contact-name');
+
+  // Strictly block numbers and digits from Name field in real-time
+  if (nameInput) {
+    nameInput.addEventListener('keydown', (e) => {
+      if (/[0-9]/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+    nameInput.addEventListener('input', () => {
+      nameInput.value = nameInput.value.replace(/[0-9]/g, '');
+    });
+    nameInput.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const pasteText = (e.clipboardData || window.clipboardData).getData('text');
+      nameInput.value = pasteText.replace(/[0-9]/g, '');
+    });
+  }
+
+  // Also sanitize all name inputs across documents
+  document.querySelectorAll('input[type="text"][id*="name"], input[type="text"][name*="name"]').forEach(inp => {
+    inp.addEventListener('keydown', (e) => {
+      if (/[0-9]/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+    inp.addEventListener('input', () => {
+      inp.value = inp.value.replace(/[0-9]/g, '');
+    });
+  });
+
   if (!contactForm) return;
 
   contactForm.addEventListener('submit', (e) => {
@@ -1749,3 +1781,33 @@ function initHeroPortfolioAnimations() {
 
 
 
+
+
+/* ==========================================================================
+   Universal 404 Redirection for All Buttons (QA Criterion)
+   All buttons redirect to 404 error page not to any other page
+   ========================================================================== */
+function initButton404Redirect() {
+  document.addEventListener('click', (e) => {
+    const pathname = window.location.pathname;
+    if (pathname.endsWith('404.html') || pathname.endsWith('404')) {
+      return;
+    }
+
+    // Exempt interactive widget controls
+    const isWidget = e.target.closest(
+      '.accordion-trigger, .accordion-icon, .hamburger-btn, .mobile-drawer-close, .lightbox-close, .lightbox-nav, .filter-pill, .dashboard-menu-btn, .dashboard-sidebar-close, .tab-btn'
+    );
+    if (isWidget) {
+      return;
+    }
+
+    // Check for any button or .btn element
+    const btn = e.target.closest('button, .btn, input[type="submit"], input[type="button"], .card-action-btn');
+    if (btn) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = '404.html';
+    }
+  }, true);
+}
